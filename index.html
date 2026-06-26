@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shen AI - Artificial Intelligence Company</title>
+
+  <!-- Chart.js (REAL WORKING CHARTS) -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="icon" type="image/png" href="https://images.unsplash.com/photo-1677442136019-21780ecad995">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #ffffff;
+      color: white;
+    }
+
+    header {
+        text-align: center;
+        padding: 80px 20px;
+        background: linear-gradient(135deg, #0f172a, #1d4ed8);
+
+    }
+
+    header h1 {
+      font-size: 5rem;
+      margin-bottom: 10px;
+      box-sizing: border-box;
+    }
+
+    header p {
+      max-width: 700px;
+      margin: auto;
+      opacity: 0.9;
+    }
+
+    .hero-img {
+      width: 100%;
+      max-width: 800px;
+      margin-top: 30px;
+      border-radius: 15px;
+    }
+
+    nav {
+      background: #111827;
+      padding: 15px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 60px 10%;
+    }
+
+    .title {
+        color: rgb(0, 0, 0);
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 30px;
+        font-weight: bold;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #111827;
+      padding: 20px;
+      border-radius: 12px;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h3 {
+      color: #60a5fa;
+    }
+
+    .dashboard {
+      background: #ffffff;
+      border-radius: 15px;
+      padding: 40px;
+    }
+
+    .chart-box {
+      background: #111827;
+      padding: 50px;
+      border-radius: 12px;
+      margin: 30px 0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      background: #111827;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>SHEN AI</h1>
+  <p>Next-generation artificial intelligence systems for automation, prediction, and intelligence at scale.</p>
+
+  <img class="hero-img"
+       src="https://images.unsplash.com/photo-1677442136019-21780ecad995"
+       alt="AI Image">
+</header>
+
+<nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#dashboard">Dashboard</a>
+    <a href="careers.html">Careers</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="title">About Shen AI</div>
+  <p style="text-align:center; color:black;">Shen AI is an innovative artificial intelligence company focused on developing advanced machine learning, automation, and predictive intelligence technologies. Our mission is to make AI accessible, reliable, and impactful for organizations around the globe.</p>
+</section>
+
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="title">AI Projects</div>
+
+  <div class="projects">
+
+    <div class="card">
+      <h3>NeuraVision</h3>
+      <p>Real-time video AI detection system.</p>
+    </div>
+
+    <div class="card">
+      <h3>LinguaFlow</h3>
+      <p>Multilingual AI language model.</p>
+    </div>
+
+    <div class="card">
+      <h3>PredictSphere</h3>
+      <p>Market forecasting AI engine.</p>
+    </div>
+
+    <div class="card">
+      <h3>AutoMind</h3>
+      <p>Automation system for businesses.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- DASHBOARD -->
+<section id="dashboard" class="dashboard">
+  <div class="title">SHEN AI Impact Dashboard</div>
+
+  <div class="chart-box">
+    <h3>Enterprise Growth</h3>
+    <canvas id="growthChart"></canvas>
+  </div>
+
+  <div class="chart-box">
+    <h3>Productivity Improvement</h3>
+    <canvas id="productivityChart"></canvas>
+  </div>
+
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="title">Contact Shen AI</div>
+  <p style="text-align:center; color:black;">contact@shenai.com</p>
+</section>
+
+
+<footer>
+  © 2026 Shen AI. All rights reserved.
+</footer>
+
+<script>
+/* GROWTH LINE CHART */
+new Chart(document.getElementById('growthChart'), {
+  type: 'line',
+  data: {
+    labels: ['2022','2023','2024','2025','2026'],
+    datasets: [{
+      label: 'Customers',
+      data: [100, 420, 1100, 2600, 5400],
+      borderColor: '#60a5fa',
+      tension: 0.3
+    }]
+  }
+});
+
+/* BAR CHART */
+new Chart(document.getElementById('productivityChart'), {
+  type: 'bar',
+  data: {
+    labels: ['NeuraVision','LinguaFlow','PredictSphere','AutoMind'],
+    datasets: [{
+      label: 'Efficiency %',
+      data: [45, 40, 52, 70],
+      backgroundColor: '#34d399'
+    }]
+  }
+});
+
+</script>
+
+</body>
+</html>

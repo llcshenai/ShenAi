@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SHEN AI - Careers</title>
+<link rel="icon" type="image/png" href="https://images.unsplash.com/photo-1677442136019-21780ecad995">
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0b1220;
+    color: white;
+  }
+
+  header {
+    text-align: center;
+    padding: 30px 20px;
+    background: linear-gradient(135deg, #0f172a, #1d4ed8);
+  }
+
+  nav {
+    background: #111827;
+    padding: 15px;
+    text-align: center;
+  }
+
+  nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 40px 20px;
+  }
+
+  .title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+
+  .jobs {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+
+  .card {
+    background: #111827;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #1f2937;
+  }
+
+  .card h3 {
+    color: #60a5fa;
+  }
+
+  .apply-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 15px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+
+  /* POPUP */
+  .overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    justify-content: center;
+    align-items: center;
+  }
+
+  .form-box {
+    background: #111827;
+    padding: 25px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 400px;
+  }
+
+  input {
+    width: 100%;
+    padding: 5px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 6px;
+  }
+
+  .submit-btn {
+    background: #2563eb;
+    color: white;
+    padding: 10px;
+    border: none;
+    width: 100%;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+
+  .close-btn {
+    background: rgb(168, 82, 82);
+    margin-top: 10px;
+  }
+
+  /* SUCCESS MESSAGE */
+  .success {
+    display: none;
+    text-align: center;
+    margin-top: 20px;
+    color: #34d399;
+  }
+
+  footer {
+    text-align: center;
+    padding: 30px;
+    background: #111827;
+    margin-top: 40px;
+  }
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>JOIN SHEN AI</h1>
+  <p style="padding: 40px;">SHEN AI is an emerging artificial intelligence startup focused on building innovative AI-driven solutions that help businesses automate processes, analyze data more efficiently, and improve decision-making. As a startup, it emphasizes agility, rapid development, and cutting-edge experimentation with machine learning and modern AI technologies such as natural language processing and predictive analytics. The company aims to create scalable AI products that can be integrated into real-world applications, helping organizations increase productivity and gain deeper insights from their data.</p>
+</header>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="index.html#projects">Projects</a>
+  <a href="careers.html">Careers</a>
+</nav>
+
+<div class="container">
+
+  <div class="title">Open Positions</div>
+
+  <div class="jobs">
+
+    <div class="card">
+      <h3 onclick="openELAID()" style="cursor:pointer;">Entry Level AI Developer</h3>
+
+
+<div id="jobModalELAID" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeELAID()">&times;</span>
+
+    <h2 style="color: #60a5fa;">Entry Level AI Developer</h2>
+
+    <p style="color: rgb(255, 255, 255);">
+      We are seeking a motivated Entry Level AI Developer to join our growing technology team and contribute to the development of intelligent applications and machine learning solutions. In this role, you will assist in building, training, and deploying AI models while working with structured and unstructured data to solve real-world problems. You will collaborate with engineers and data scientists to implement features using technologies such as Python, machine learning frameworks, and APIs, while gaining hands-on experience in areas like natural language processing, computer vision, and predictive analytics. This position is ideal for recent graduates or early-career professionals who are passionate about artificial intelligence and eager to grow their skills in a fast-paced, innovation-driven environment.
+     </p>
+
+    <h3>Requirements</h3>
+    <ul style="color: rgb(255, 255, 255);">
+      <li>Bachelor’s degree in Computer Science, Artificial Intelligence, Data Science, Machine Learning, or a related field.</li>
+      <li>Strong understanding of Python programming and basic software development principles.</li>
+      <li>Familiarity with machine learning concepts such as supervised and unsupervised learning.</li>
+      <li>Basic experience with AI/ML libraries such as TensorFlow, PyTorch, Scikit-learn, or similar tools.</li>
+      <li>Understanding of data preprocessing, data cleaning, and feature engineering techniques.</li>
+      <li>Knowledge of statistics, probability, and linear algebra fundamentals.</li>
+      <li>Familiarity with APIs and working with datasets (CSV, JSON, SQL databases).</li>
+      <li>Strong problem-solving and analytical thinking skills.</li>
+      <li>Ability to work collaboratively in a team-oriented, fast-paced environment.</li>
+      <li>Passion for learning new AI technologies and staying updated with industry trends.</li>
+    </ul>
+
+    <h3>Benefits</h3>
+    <ul style="color: rgb(255, 255, 255);">
+      <li>Competitive salary and bonus opportunities.</li>
+      <li>Medical, dental, and vision insurance.</li>
+      <li>401(k) with company match.</li>
+      <li>Paid time off and company holidays.</li>
+      <li>Remote work options.</li>
+      <li>Professional development programs.</li>
+    </ul>
+    <button class="apply-btn" onclick="openForm('Entry Level AI Developer')">Apply Now</button>
+  </div>
+</div>
+
+
+<script>
+function openELAID() {
+  document.getElementById("jobModalELAID").style.display = "block";
+}
+
+function closeELAID() {
+  document.getElementById("jobModalELAID").style.display = "none";
+}
+
+window.onclick = function(event) {
+  const modal = document.getElementById("jobModalELAID");
+  if (event.target === modal) {
+    closeELAID();
+  }
+}
+</script>
+
+      <p>REMOTE, USA</p>
+      <button class="apply-btn" onclick="openForm('Entry Level AI Developer')">Apply Now</button>
+    </div>
+
+
+
+
+
+    <div class="card">
+      <h3 onclick="openSAID()" style="cursor:pointer;">Senior AI Developer</h3>
+
+
+<div id="jobModalSAID" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeSAID()">&times;</span>
+
+    <h2 style="color: #60a5fa;">Senior AI Developer</h2>
+
+    <p style="color: rgb(255, 255, 255);">
+      We are seeking a highly skilled Senior AI Developer to lead the design, development, and deployment of advanced artificial intelligence solutions across a range of complex business problems. In this role, you will architect and implement scalable machine learning models, optimize AI pipelines, and guide the integration of AI systems into production environments. You will collaborate with data scientists, engineers, and product teams to translate business requirements into intelligent, data-driven solutions while ensuring performance, accuracy, and scalability. This position requires strong technical expertise in machine learning, deep learning, and software engineering, along with leadership ability to mentor junior developers and drive innovation in a fast-paced, research-driven environment.
+     </p>
+
+    <h3>Requirements</h3>
+    <ul style="color: rgb(255, 255, 255);">
+      <li>Bachelor’s or Master’s degree in Computer Science, Artificial Intelligence, Data Science, Machine Learning, or a related field (PhD preferred for research-heavy roles).</li>
+      <li>5+ years of professional experience in AI/ML development or related fields.</li>
+      <li>Strong proficiency in Python and experience with AI/ML frameworks such as TensorFlow, PyTorch, or JAX.</li>
+      <li>Deep understanding of machine learning, deep learning, neural networks, and model optimization techniques.</li>
+      <li>Experience with large-scale data processing, feature engineering, and model deployment pipelines.</li>
+      <li>Strong knowledge of statistics, probability, linear algebra, and optimization methods.</li>
+      <li>Experience working with cloud platforms such as AWS, Azure, or Google Cloud for AI workloads.</li>
+      <li>Familiarity with MLOps practices, including CI/CD for machine learning models and model monitoring.</li>
+      <li>Proven ability to design scalable AI systems and lead technical architecture decisions.</li>
+      <li>Strong leadership, communication, and mentoring skills for guiding junior engineers and cross-functional teams.</li>
+    </ul>
+
+    <h3>Benefits</h3>
+    <ul style="color: rgb(255, 255, 255);">
+      <li>Competitive salary and bonus opportunities.</li>
+      <li>Medical, dental, and vision insurance.</li>
+      <li>401(k) with company match.</li>
+      <li>Paid time off and company holidays.</li>
+      <li>Remote work options.</li>
+      <li>Professional development programs.</li>
+    </ul>
+    <button class="apply-btn" onclick="openForm('Senior AI Developer')">Apply Now</button>
+  </div>
+</div>
+
+
+<script>
+function openSAID() {
+  document.getElementById("jobModalSAID").style.display = "block";
+}
+
+function closeSAID() {
+  document.getElementById("jobModalSAID").style.display = "none";
+}
+
+window.onclick = function(event) {
+  const modal = document.getElementById("jobModalSAID");
+  if (event.target === modal) {
+    closeSAID();
+  }
+}
+</script>
+
+
+      <p>REMOTE, USA</p>
+      <button class="apply-btn" onclick="openForm('Senior AI Developer')">Apply Now</button>
+    </div>
+
+
+
+
+
+
+
+
+    <div class="card">
+      <h3 onclick="openDS()" style="cursor:pointer;">Data Scientist</h3>
+
+
+<div id="jobModalDS" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeDS()">&times;</span>
+
+    <h2 style="color: #60a5fa;">Data Scientist</h2>
+
+    <p style="color: rgb(255, 255, 255);">
+     We are seeking a skilled Data Scientist to join our analytics team and help transform complex data into actionable insights that drive strategic business decisions. In this role, you will analyze large datasets, build predictive models, and apply statistical and machine learning techniques to solve real-world problems. You will work closely with stakeholders across the organization to identify trends, develop data-driven solutions, and communicate findings through clear visualizations and reports. This position requires strong analytical thinking, technical expertise in data science tools, and the ability to translate business challenges into analytical frameworks in a collaborative, fast-paced environment.
+     </p>
+
+    <h3>Requirements</h3>
+    <ul style="color: rgb(255, 255, 255);">
+      <li>Bachelor’s or Master’s degree in Data Science, Computer Science, Statistics, Mathematics, Economics, or a related quantitative field.</li>
+      <li>Strong proficiency in Python or R for data analysis and modeling.</li>
+      <li>Solid understanding of statistics, probability, and machine learning concepts.</li>
+      <li>Experience with data manipulation and analysis using tools such as Pandas, NumPy, or similar libraries.</li>
+      <li>Familiarity with data visualization tools such as Tableau, Power BI, Matplotlib, or Seaborn.</li>
+      <li>Strong SQL skills for querying relational databases.</li>
+      <li>Experience working with large datasets and performing data cleaning and preprocessing.</li>
+      <li>Knowledge of machine learning algorithms such as regression, classification, clustering, and time series analysis.</li>
+      <li>Strong problem-solving and analytical thinking abilities.</li>
+      <li>Excellent communication skills to present insights to both technical and non-technical audiences.</li>
+    </ul>
+
+    <h3>Benefits</h3>
+    <ul style="color: rgb(255, 255, 255);">
+      <li>Competitive salary and bonus opportunities.</li>
+      <li>Medical, dental, and vision insurance.</li>
+      <li>401(k) with company match.</li>
+      <li>Paid time off and company holidays.</li>
+      <li>Remote work options.</li>
+      <li>Professional development programs.</li>
+    </ul>
+    <button class="apply-btn" onclick="openForm('Data Scientist')">Apply Now</button>
+  </div>
+</div>
+
+
+<script>
+function openDS() {
+  document.getElementById("jobModalDS").style.display = "block";
+}
+
+function closeDS() {
+  document.getElementById("jobModalDS").style.display = "none";
+}
+
+window.onclick = function(event) {
+  const modal = document.getElementById("jobModalDS");
+  if (event.target === modal) {
+    closeDS();
+  }
+}
+</script>
+      <p>REMOTE, USA</p>
+      <button class="apply-btn" onclick="openForm('Data Scientist')">Apply Now</button>
+    </div>
+
+
+
+
+
+
+
+
+    <div class="card">
+      <h3 onclick="openELSE()" style="cursor:pointer;">
+  Entry Level Software Engineer
+      </h3>
+
+<!-- ENTRY LEVEL SOFTWARE ENGINEER-->
+<div id="jobModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeELSE()">&times;</span>
+
+    <h2 style="color: #60a5fa;">Entry Level Software Engineer</h2>
+
+    <p style="color: rgb(255, 255, 255);">
+      We are seeking a motivated Entry Level Software Engineer to join our development team and contribute to building scalable, efficient, and user-friendly software solutions. In this role, you will work closely with experienced engineers to design, develop, test, and maintain applications across various platforms while gaining hands-on experience with modern programming languages, frameworks, and development tools. You will participate in code reviews, troubleshoot technical issues, and collaborate with cross-functional teams to deliver high-quality software products. This position is ideal for recent graduates or early-career professionals looking to grow their technical skills and build a strong foundation in software engineering within a fast-paced, innovative environment.
+    </p>
+
+    <h3>Requirements</h3>
+    <ul style="color: rgb(255, 255, 255);">
+      <li>Bachelor's degree in Computer Science or related field.</li>
+      <li>Knowledge of Java, Python, JavaScript, C#, or C++.</li>
+      <li>Understanding of SQL and relational databases.</li>
+      <li>Strong analytical and problem-solving skills.</li>
+      <li>Excellent communication and teamwork abilities.</li>
+    </ul>
+
+    <h3>Benefits</h3>
+    <ul style="color: rgb(255, 255, 255);">
+      <li>Competitive salary and bonus opportunities.</li>
+      <li>Medical, dental, and vision insurance.</li>
+      <li>401(k) with company match.</li>
+      <li>Paid time off and company holidays.</li>
+      <li>Remote work options.</li>
+      <li>Professional development programs.</li>
+    </ul>
+    <button class="apply-btn" onclick="openForm('Entry Level Software Engineer')">Apply Now</button>
+  </div>
+</div>
+
+<style>
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.modal-content {
+  background:#1f2937;
+  width: 60%;
+  max-width: 700px;
+  margin: 5% auto;
+  padding: 25px;
+  border-radius: 10px;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.close {
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+</style>
+
+<script>
+function openELSE() {
+  document.getElementById("jobModal").style.display = "block";
+}
+
+function closeELSE() {
+  document.getElementById("jobModal").style.display = "none";
+}
+
+window.onclick = function(event) {
+  const modal = document.getElementById("jobModal");
+  if (event.target === modal) {
+    closeELSE();
+  }
+}
+</script>
+
+      <p>REMOTE, USA</p>
+      <button class="apply-btn" onclick="openForm('Entry Level Software Engineer')">Apply Now</button>
+    </div>
+
+
+
+
+
+
+
+
+    <div class="card">
+      <h3 onclick="openELDS()" style="cursor:pointer;">Entry Level Data Scientist</h3>
+      
+<!-- ENTRY LEVEL DATA SCIENTIST-->
+<div id="jobModalELDS" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeELDS()">&times;</span>
+
+    <h2 style="color: #60a5fa;">Entry Level Data Scientist</h2>
+
+    <p style="color: rgb(255, 255, 255);">
+      We are seeking an analytical and curious Entry Level Data Scientist to join our data and analytics team. In this role, you will work with large datasets to uncover insights, build predictive models, and support data-driven decision-making across the organization. You will collaborate with experienced data scientists, engineers, and business stakeholders to develop solutions that improve operational efficiency, enhance customer experiences, and identify growth opportunities. This position offers hands-on experience with statistical analysis, machine learning techniques, data visualization, and modern data tools while providing mentorship and professional development opportunities for a successful career in data science.
+    </p>
+
+    <h3>Requirements</h3>
+    <ul style="color: rgb(255, 255, 255);">
+      <li>Bachelor's degree in Data Science, Computer Science, Statistics, Mathematics, Economics, or a related quantitative field.</li>
+      <li>Knowledge of Python, R, SQL, or other data analysis and programming languages.</li>
+      <li>Understanding of statistics, probability, and machine learning fundamentals.</li>
+      <li>Experience working with datasets through academic projects, internships, or personal projects.</li>
+      <li>Familiarity with data visualization tools such as Tableau, Power BI, Matplotlib, or Seaborn.</li>
+      <li>Knowledge of data cleaning, data wrangling, and exploratory data analysis techniques.</li>
+      <li>Strong analytical, critical thinking, and problem-solving skills.</li>
+      <li>Ability to communicate technical findings to both technical and non-technical audiences.</li>
+      <li>Familiarity with relational databases and writing SQL queries.</li>
+      <li>Strong attention to detail and eagerness to learn new technologies and methodologies.</li>
+    </ul>
+
+    <h3>Benefits</h3>
+    <ul style="color: rgb(255, 255, 255);">
+      <li>Competitive salary and bonus opportunities.</li>
+      <li>Medical, dental, and vision insurance.</li>
+      <li>401(k) with company match.</li>
+      <li>Paid time off and company holidays.</li>
+      <li>Remote work options.</li>
+      <li>Professional development programs.</li>
+    </ul>
+    <button class="apply-btn" onclick="openForm('Entry Level Data Scientist')">Apply Now</button>
+  </div>
+</div>
+
+
+<script>
+function openELDS() {
+  document.getElementById("jobModalELDS").style.display = "block";
+}
+
+function closeELDS() {
+  document.getElementById("jobModalELDS").style.display = "none";
+}
+
+window.onclick = function(event) {
+  const modal = document.getElementById("jobModalELDS");
+  if (event.target === modal) {
+    closeELDS();
+  }
+}
+</script>
+
+      <p>REMOTE, USA</p>
+      <button class="apply-btn" onclick="openForm('Entry Level Data Scientist')">Apply Now</button>
+    </div>
+
+
+
+
+
+
+
+
+    <div class="card">
+      <h3 onclick="openELDA()" style="cursor:pointer;">Entry Level Data Analyst</h3>
+
+      
+<div id="jobModalELDA" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeELDA()">&times;</span>
+
+    <h2 style="color: #60a5fa;">Entry Level Data Analyst</h2>
+
+    <p style="color: rgb(255, 255, 255);">
+      We are seeking a detail-oriented Entry Level Data Analyst to join our analytics team and support data-driven decision-making across the organization. In this role, you will collect, clean, and analyze data from multiple sources to identify trends, generate insights, and create reports that help guide business strategies. You will work closely with stakeholders to understand reporting needs, build dashboards, and present findings in a clear and actionable way. This position is ideal for recent graduates or early-career professionals who are eager to develop their skills in SQL, Excel, and data visualization tools while gaining hands-on experience in a fast-paced, collaborative environment.
+     </p>
+
+    <h3>Requirements</h3>
+    <ul style="color: rgb(255, 255, 255);">
+      <li>Bachelor's degree in Data Science, Computer Science, Statistics, Mathematics, Economics, or a related quantitative field.</li>
+      <li>Knowledge of Python, R, SQL, or other data analysis and programming languages.</li>
+      <li>Understanding of statistics, probability, and machine learning fundamentals.</li>
+      <li>Experience working with datasets through academic projects, internships, or personal projects.</li>
+      <li>Familiarity with data visualization tools such as Tableau, Power BI, Matplotlib, or Seaborn.</li>
+      <li>Knowledge of data cleaning, data wrangling, and exploratory data analysis techniques.</li>
+      <li>Strong analytical, critical thinking, and problem-solving skills.</li>
+      <li>Ability to communicate technical findings to both technical and non-technical audiences.</li>
+      <li>Familiarity with relational databases and writing SQL queries.</li>
+      <li>Strong attention to detail and eagerness to learn new technologies and methodologies.</li>
+    </ul>
+
+    <h3>Benefits</h3>
+    <ul style="color: rgb(255, 255, 255);">
+      <li>Competitive salary and bonus opportunities.</li>
+      <li>Medical, dental, and vision insurance.</li>
+      <li>401(k) with company match.</li>
+      <li>Paid time off and company holidays.</li>
+      <li>Remote work options.</li>
+      <li>Professional development programs.</li>
+    </ul>
+    <button class="apply-btn" onclick="openForm('Entry Level Data Analyst')">Apply Now</button>
+  </div>
+</div>
+
+
+<script>
+function openELDA() {
+  document.getElementById("jobModalELDA").style.display = "block";
+}
+
+function closeELDA() {
+  document.getElementById("jobModalELDA").style.display = "none";
+}
+
+window.onclick = function(event) {
+  const modal = document.getElementById("jobModalELDA");
+  if (event.target === modal) {
+    closeELDA();
+  }
+}
+</script>
+
+      <p>REMOTE, USA</p>
+      <button class="apply-btn" onclick="openForm('Entry Level Data Analyst')">Apply Now</button>
+    </div>
+
+
+
+
+
+
+
+
+
+    <div class="card">
+      <h3 onclick="openSETWO()" style="cursor:pointer;">Software Engineer II</h3>
+
+       
+<div id="jobModalSETWO" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeSETWO()">&times;</span>
+
+    <h2 style="color: #60a5fa;">Software Engineer II</h2>
+
+    <p style="color: rgb(255, 255, 255);">
+      We are seeking an experienced Software Engineer II to join our engineering team and contribute to the design, development, and optimization of scalable software solutions. In this role, you will take ownership of moderately complex features, write clean and efficient code, and collaborate with cross-functional teams to deliver high-quality products. You will participate in system design discussions, code reviews, and troubleshooting efforts while helping improve overall application performance and reliability. This position is ideal for engineers who have gained foundational experience and are ready to take on more responsibility, contribute to technical decision-making, and grow into a senior-level engineering role within a fast-paced, agile environment.
+    </p>
+
+    <h3>Requirements</h3>
+    <ul style="color: rgb(255, 255, 255);">
+      <li>Bachelor’s degree in Computer Science, Software Engineering, or a related field.</li>
+      <li>2–4 years of professional software development experience.</li>
+      <li>Strong proficiency in one or more programming languages such as Java, Python, JavaScript, C#, or C++.</li>
+      <li>Solid understanding of data structures, algorithms, and object-oriented design principles.</li>
+      <li>Experience building and maintaining APIs and working with relational or NoSQL databases.</li>
+      <li>Proficiency with version control systems such as Git.</li>
+      <li>Familiarity with cloud platforms such as AWS, Azure, or Google Cloud Platform.</li>
+      <li>Understanding of CI/CD pipelines and Agile/Scrum development methodologies.</li>
+      <li>Strong problem-solving and debugging skills.</li>
+      <li>Ability to work independently while collaborating effectively in a team environment.</li>
+    </ul>
+
+    <h3>Benefits</h3>
+    <ul style="color: rgb(255, 255, 255);">
+      <li>Competitive salary and bonus opportunities.</li>
+      <li>Medical, dental, and vision insurance.</li>
+      <li>401(k) with company match.</li>
+      <li>Paid time off and company holidays.</li>
+      <li>Remote work options.</li>
+      <li>Professional development programs.</li>
+    </ul>
+    <button class="apply-btn" onclick="openForm('Software Engineer II')">Apply Now</button>
+  </div>
+</div>
+
+
+<script>
+function openSETWO() {
+  document.getElementById("jobModalSETWO").style.display = "block";
+}
+
+function closeSETWO() {
+  document.getElementById("jobModalSETWO").style.display = "none";
+}
+
+window.onclick = function(event) {
+  const modal = document.getElementById("jobModalSETWO");
+  if (event.target === modal) {
+    closeSETWO();
+  }
+}
+</script>
+
+      <p>REMOTE, USA</p>
+      <button class="apply-btn" onclick="openForm('Software Engineer II')">Apply Now</button>
+    </div>
+
+
+  </div>
+</div>
+
+
+
+
+
+
+
+
+<!-- APPLY POPUP -->
+<div class="overlay" id="applyOverlay">
+  <div class="form-box">
+
+    <h3 id="jobTitle">Apply</h3>
+
+    <form id="applyForm">
+
+      <input type="text" id="firstName" placeholder="First Name" required>
+
+      <input type="text" id="lastName" placeholder="Last Name" required>
+
+      <input type="file" id="resume" accept=".pdf,.doc,.docx,.jpg" required>
+
+      <button class="submit-btn" type="submit">Submit Application</button>
+
+    </form>
+
+    <div class="success" id="successMsg">
+      Application Submitted Successfully 🎉
+    </div>
+
+    <button class="submit-btn close-btn" onclick="closeForm()">Close</button>
+
+  </div>
+</div>
+
+<footer>
+  © 2026 Shen AI. All rights reserved.
+</footer>
+
+<script>
+
+function openForm(job) {
+  closeELSE();
+  closeELDS();
+  closeELDA();
+  closeSETWO();
+  closeELAID();
+  closeSAID();
+  closeDS();
+  document.getElementById("applyOverlay").style.display = "flex";
+  document.getElementById("jobTitle").innerText = "Applied for " + job;
+}
+
+function closeForm() {
+  document.getElementById("applyOverlay").style.display = "none";
+  document.getElementById("successMsg").style.display = "none";
+  document.getElementById("applyForm").style.display = "block";
+}
+
+document.getElementById("applyForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const first = document.getElementById("firstName").value;
+  const last = document.getElementById("lastName").value;
+  const file = document.getElementById("resume").files[0]?.name;
+
+  let applications = JSON.parse(localStorage.getItem("shenApplications")) || [];
+
+  applications.push({
+    firstName: first,
+    lastName: last,
+    resume: file,
+    time: new Date().toISOString()
+  });
+
+  localStorage.setItem("shenApplications", JSON.stringify(applications));
+
+  document.getElementById("applyForm").style.display = "none";
+  document.getElementById("successMsg").style.display = "block";
+});
+
+</script>
+
+</body>
+</html>
