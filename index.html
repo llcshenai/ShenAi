@@ -9,6 +9,442 @@
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <link rel="icon" type="image/png" href="https://images.unsplash.com/photo-1677442136019-21780ecad995">
   <style>
+    .article-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(450px,1fr));
+
+gap:35px;
+
+margin-top:50px;
+
+}
+
+.article-card{
+
+background:#111827;
+
+padding:35px;
+
+border-radius:20px;
+
+transition:.35s;
+
+box-shadow:0 15px 40px rgba(0,0,0,.15);
+
+}
+
+.article-card:hover{
+
+transform:translateY(-8px);
+
+box-shadow:0 20px 45px rgba(37,99,235,.35);
+
+}
+
+.article-card h2{
+
+color:#60a5fa;
+
+margin-bottom:20px;
+
+}
+
+.article-card p{
+
+color:#d1d5db;
+
+line-height:1.9;
+
+font-size:16px;
+
+margin-bottom:20px;
+
+}
+    .kpi-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+gap:25px;
+
+margin:50px 0;
+
+}
+
+.kpi-card{
+
+background:#111827;
+
+padding:30px;
+
+border-radius:18px;
+
+text-align:center;
+
+transition:.35s;
+
+}
+
+.kpi-card:hover{
+
+transform:translateY(-8px);
+
+box-shadow:0 20px 40px rgba(37,99,235,.35);
+
+}
+
+.kpi-card h2{
+
+font-size:42px;
+
+color:#60a5fa;
+
+margin-bottom:10px;
+
+}
+
+.kpi-card span{
+
+font-weight:bold;
+
+display:block;
+
+margin-bottom:10px;
+
+}
+
+.dashboard-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(450px,1fr));
+
+gap:30px;
+
+}
+
+.chart-box{
+
+background:#111827;
+
+padding:30px;
+
+border-radius:20px;
+
+box-shadow:0 15px 40px rgba(0,0,0,.2);
+
+}
+    .section-subtitle{
+
+max-width:900px;
+
+margin:auto;
+
+text-align:center;
+
+color:#555;
+
+font-size:18px;
+
+line-height:1.8;
+
+margin-bottom:50px;
+
+}
+
+.products-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+gap:30px;
+
+padding-top:30px;
+
+}
+
+.product-card{
+
+background:#111827;
+
+padding:35px;
+
+border-radius:20px;
+
+transition:.35s;
+
+box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+}
+
+.product-card:hover{
+
+transform:translateY(-10px);
+
+box-shadow:0 20px 45px rgba(37,99,235,.35);
+
+}
+
+.product-icon{
+
+font-size:42px;
+
+margin-bottom:15px;
+
+}
+
+.product-card h3{
+
+color:#60a5fa;
+
+margin-bottom:15px;
+
+}
+
+.product-card p{
+
+color:#d1d5db;
+
+line-height:1.7;
+
+}
+
+.product-card ul{
+
+margin:20px 0;
+
+padding-left:18px;
+
+color:white;
+
+}
+
+.product-card li{
+
+margin-bottom:10px;
+
+}
+
+.product-card a{
+
+display:inline-block;
+
+margin-top:15px;
+
+text-decoration:none;
+
+color:#60a5fa;
+
+font-weight:bold;
+
+}
+    .hero{
+position:relative;
+height:95vh;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+overflow:hidden;
+background:
+linear-gradient(135deg,#020617,#0f172a,#1d4ed8);
+}
+
+.hero-overlay{
+position:absolute;
+width:100%;
+height:100%;
+background:
+radial-gradient(circle at top,#3b82f655,transparent 60%);
+}
+
+.navbar{
+
+position:absolute;
+
+top:0;
+
+width:100%;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:20px 8%;
+
+background:rgba(10,15,30,.55);
+
+backdrop-filter:blur(12px);
+
+box-sizing:border-box;
+
+z-index:100;
+}
+
+.logo{
+
+font-size:28px;
+
+font-weight:bold;
+
+color:white;
+}
+
+.nav-links{
+
+display:flex;
+
+gap:30px;
+
+list-style:none;
+}
+
+.nav-links a{
+
+color:white;
+
+text-decoration:none;
+
+font-weight:600;
+
+transition:.3s;
+}
+
+.nav-links a:hover{
+
+color:#60a5fa;
+}
+
+.hero-content{
+
+position:relative;
+
+z-index:10;
+
+max-width:850px;
+
+text-align:center;
+}
+
+.hero-content h1{
+
+font-size:72px;
+
+margin-bottom:20px;
+
+line-height:1.1;
+}
+
+.hero-content p{
+
+font-size:22px;
+
+opacity:.9;
+
+line-height:1.8;
+}
+
+.hero-buttons{
+
+margin-top:40px;
+
+display:flex;
+
+justify-content:center;
+
+gap:20px;
+}
+
+.btn-primary{
+
+background:#2563eb;
+
+padding:18px 34px;
+
+border-radius:12px;
+
+color:white;
+
+text-decoration:none;
+
+font-weight:bold;
+}
+
+.btn-secondary{
+
+background:transparent;
+
+border:2px solid white;
+
+padding:18px 34px;
+
+border-radius:12px;
+
+color:white;
+
+text-decoration:none;
+}
+
+.stats{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+gap:25px;
+
+padding:70px 8%;
+
+background:#08101f;
+}
+
+.stat-card{
+
+background:rgba(255,255,255,.04);
+
+border:1px solid rgba(255,255,255,.08);
+
+padding:35px;
+
+border-radius:18px;
+
+backdrop-filter:blur(18px);
+
+text-align:center;
+
+transition:.35s;
+}
+
+.stat-card:hover{
+
+transform:translateY(-10px);
+
+box-shadow:0 20px 40px rgba(37,99,235,.35);
+}
+
+.stat-card h2{
+
+font-size:46px;
+
+margin:0;
+
+color:#60a5fa;
+}
+
+.stat-card p{
+
+margin-top:10px;
+
+font-size:18px;
+
+color:#d1d5db;
+}
     body {
       margin: 0;
       font-family: Arial, sans-serif;
@@ -107,28 +543,91 @@
       background: #111827;
     }
   </style>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5602435521454654"
-     crossorigin="anonymous"></script>
 </head>
 
 <body>
-<header>
-  <h1>SHEN AI</h1>
-  <p>Next-generation artificial intelligence systems for automation, prediction, and intelligence at scale.</p>
+<header class="hero">
 
-  <img class="hero-img"
-       src="https://images.unsplash.com/photo-1677442136019-21780ecad995"
-       alt="AI Image">
-</header>
+<div class="hero-overlay"></div>
 
-<nav>
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#dashboard">Dashboard</a>
-    <a href="careers.html">Careers</a>
-    <a href="#contact">Contact</a>
+<nav class="navbar">
+
+<div class="logo">
+<h2>SHEN AI</h2>
+</div>
+
+<ul class="nav-links">
+<li><a href="#about">About</a></li>
+<li><a href="#products">Products</a></li>
+<li><a href="#dashboard">Analytics</a></li>
+<li><a href="#research">Research</a></li>
+<li><a href="#news">News</a></li>
+<li><a href="careers.html">Careers</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
 </nav>
 
+<div class="hero-content">
+
+<h1>Building the Future of Artificial Intelligence</h1>
+
+<p>
+Enterprise AI solutions designed to automate workflows,
+accelerate innovation, predict business outcomes,
+and empower organizations with next-generation
+machine learning technologies.
+</p>
+
+<div class="hero-buttons">
+
+<a href="#products" class="btn-primary">
+Explore Products
+</a>
+
+<a href="careers.html" class="btn-secondary">
+Join Our Team
+</a>
+
+</div>
+
+</div>
+
+</header>
+
+<section class="stats">
+
+<div class="stat-card">
+<h2>250+</h2>
+<p>Enterprise Clients</p>
+</div>
+
+<div class="stat-card">
+<h2>18</h2>
+<p>Countries Served</p>
+</div>
+
+<div class="stat-card">
+<h2>99.98%</h2>
+<p>Cloud Uptime</p>
+</div>
+
+<div class="stat-card">
+<h2>12.4B</h2>
+<p>AI Predictions</p>
+</div>
+
+<div class="stat-card">
+<h2>154</h2>
+<p>AI Engineers</p>
+</div>
+
+<div class="stat-card">
+<h2>98.7%</h2>
+<p>Model Accuracy</p>
+</div>
+
+</section>
 <!-- ABOUT -->
 <section id="about">
   <div class="title">About Shen AI</div>
@@ -136,51 +635,482 @@
 </section>
 
 
-<!-- PROJECTS -->
-<section id="projects">
-  <div class="title">AI Projects</div>
+<!-- PROJECTS --><!-- PRODUCTS -->
 
-  <div class="projects">
+<section id="products">
 
-    <div class="card">
-      <h3>NeuraVision</h3>
-      <p>Real-time video AI detection system.</p>
-    </div>
+<div class="title">Enterprise AI Solutions</div>
 
-    <div class="card">
-      <h3>LinguaFlow</h3>
-      <p>Multilingual AI language model.</p>
-    </div>
+<p class="section-subtitle">
+Our portfolio of enterprise-grade AI products helps organizations automate
+operations, uncover insights, and accelerate digital transformation through
+machine learning, generative AI, and intelligent automation.
+</p>
 
-    <div class="card">
-      <h3>PredictSphere</h3>
-      <p>Market forecasting AI engine.</p>
-    </div>
+<div class="products-grid">
 
-    <div class="card">
-      <h3>AutoMind</h3>
-      <p>Automation system for businesses.</p>
-    </div>
+<div class="product-card">
+<div class="product-icon">🧠</div>
+<h3>SHEN GPT Enterprise</h3>
+<p>Private large language model platform for secure enterprise knowledge management, document analysis, and AI copilots.</p>
 
-  </div>
+<ul>
+<li>✓ Secure Enterprise Chat</li>
+<li>✓ Knowledge Base Search</li>
+<li>✓ API Integration</li>
+<li>✓ RAG Architecture</li>
+</ul>
+
+<a href="#">Learn More →</a>
+</div>
+
+<div class="product-card">
+
+<div class="product-icon">📊</div>
+
+<h3>PredictSphere</h3>
+
+<p>
+Advanced predictive analytics platform capable of forecasting sales,
+customer behavior, demand, and financial trends using machine learning.
+</p>
+
+<ul>
+
+<li>✓ Forecasting</li>
+
+<li>✓ Time Series Models</li>
+
+<li>✓ AI Reports</li>
+
+<li>✓ Business Intelligence</li>
+
+</ul>
+
+<a href="#">Learn More →</a>
+
+</div>
+
+<div class="product-card">
+
+<div class="product-icon">👁️</div>
+
+<h3>VisionAI</h3>
+
+<p>
+Computer vision platform for manufacturing, healthcare,
+retail analytics and quality inspection.
+</p>
+
+<ul>
+
+<li>✓ Image Recognition</li>
+
+<li>✓ Object Detection</li>
+
+<li>✓ OCR</li>
+
+<li>✓ Video Analytics</li>
+
+</ul>
+
+<a href="#">Learn More →</a>
+
+</div>
+
+<div class="product-card">
+
+<div class="product-icon">🤖</div>
+
+<h3>AutoMind</h3>
+
+<p>
+Enterprise workflow automation platform powered by intelligent AI agents.
+</p>
+
+<ul>
+
+<li>✓ AI Agents</li>
+
+<li>✓ Workflow Builder</li>
+
+<li>✓ Automation</li>
+
+<li>✓ API Connectors</li>
+
+</ul>
+
+<a href="#">Learn More →</a>
+
+</div>
+
+<div class="product-card">
+
+<div class="product-icon">💬</div>
+
+<h3>LinguaFlow</h3>
+
+<p>
+Real-time multilingual language model supporting over 120 languages.
+</p>
+
+<ul>
+
+<li>✓ Translation</li>
+
+<li>✓ Summarization</li>
+
+<li>✓ Speech Recognition</li>
+
+<li>✓ Voice AI</li>
+
+</ul>
+
+<a href="#">Learn More →</a>
+
+</div>
+
+<div class="product-card">
+
+<div class="product-icon">🏥</div>
+
+<h3>MedicalScan AI</h3>
+
+<p>
+AI-powered healthcare platform assisting clinicians with medical imaging,
+risk prediction and patient analytics.
+</p>
+
+<ul>
+
+<li>✓ Medical Imaging</li>
+
+<li>✓ Risk Prediction</li>
+
+<li>✓ Clinical AI</li>
+
+<li>✓ Decision Support</li>
+
+</ul>
+
+<a href="#">Learn More →</a>
+
+</div>
+
+<div class="product-card">
+
+<div class="product-icon">💰</div>
+
+<h3>FinanceIQ</h3>
+
+<p>
+Fraud detection and intelligent financial forecasting powered by deep learning.
+</p>
+
+<ul>
+
+<li>✓ Fraud Detection</li>
+
+<li>✓ Credit Risk</li>
+
+<li>✓ Compliance</li>
+
+<li>✓ Forecasting</li>
+
+</ul>
+
+<a href="#">Learn More →</a>
+
+</div>
+
+<div class="product-card">
+
+<div class="product-icon">🔒</div>
+
+<h3>CyberShield AI</h3>
+
+<p>
+AI cybersecurity platform providing anomaly detection,
+network monitoring and automated threat response.
+</p>
+
+<ul>
+
+<li>✓ Threat Detection</li>
+
+<li>✓ SIEM</li>
+
+<li>✓ Zero Trust</li>
+
+<li>✓ AI Monitoring</li>
+
+</ul>
+
+<a href="#">Learn More →</a>
+
+</div>
+
+<div class="product-card">
+
+<div class="product-icon">👨‍💻</div>
+
+<h3>CodePilot</h3>
+
+<p>
+AI software engineering assistant helping developers write,
+review and optimize production-quality code.
+</p>
+
+<ul>
+
+<li>✓ Code Generation</li>
+
+<li>✓ Debugging</li>
+
+<li>✓ Documentation</li>
+
+<li>✓ Code Review</li>
+
+</ul>
+
+<a href="#">Learn More →</a>
+
+</div>
+
+</div>
+
 </section>
 
 <!-- DASHBOARD -->
+ 
+<!-- DASHBOARD -->
+
 <section id="dashboard" class="dashboard">
-  <div class="title">SHEN AI Impact Dashboard</div>
 
-  <div class="chart-box">
-    <h3>Enterprise Growth</h3>
-    <canvas id="growthChart"></canvas>
-  </div>
+<div class="title">SHEN AI Enterprise Analytics</div>
 
-  <div class="chart-box">
-    <h3>Productivity Improvement</h3>
-    <canvas id="productivityChart"></canvas>
-  </div>
+<p class="section-subtitle">
+Real-time metrics demonstrating AI platform performance, customer growth,
+model accuracy, and enterprise adoption across multiple industries.
+</p>
+
+<div class="kpi-grid">
+
+<div class="kpi-card">
+<h2>$128.6M</h2>
+<span>Annual Revenue</span>
+<p>▲ 41% YoY Growth</p>
+</div>
+
+<div class="kpi-card">
+<h2>98.7%</h2>
+<span>AI Accuracy</span>
+<p>Across All Models</p>
+</div>
+
+<div class="kpi-card">
+<h2>12.4B</h2>
+<span>Predictions</span>
+<p>Generated This Year</p>
+</div>
+
+<div class="kpi-card">
+<h2>2.8M</h2>
+<span>Monthly Users</span>
+<p>Growing Every Month</p>
+</div>
+
+</div>
+
+
+<div class="dashboard-grid">
+
+<div class="chart-box">
+<h3>Annual Revenue Growth</h3>
+<canvas id="revenueChart"></canvas>
+</div>
+
+<div class="chart-box">
+<h3>Monthly AI Predictions</h3>
+<canvas id="predictionChart"></canvas>
+</div>
+
+<div class="chart-box">
+<h3>Industry Distribution</h3>
+<canvas id="industryChart"></canvas>
+</div>
+
+<div class="chart-box">
+<h3>AI Model Accuracy</h3>
+<canvas id="accuracyChart"></canvas>
+</div>
+
+<div class="chart-box">
+<h3>Employee Growth</h3>
+<canvas id="employeeChart"></canvas>
+</div>
+
+<div class="chart-box">
+<h3>API Requests</h3>
+<canvas id="apiChart"></canvas>
+</div>
+
+</div>
+
+<!-- ===================== -->
+<!-- AI RESEARCH -->
+<!-- ===================== -->
+
+<section id="research">
+
+<div class="title">
+AI Research & Insights
+</div>
+
+<p class="section-subtitle">
+At SHEN AI, our research focuses on practical artificial intelligence that
+helps organizations solve real-world business challenges through advanced
+machine learning, generative AI, computer vision, and intelligent automation.
+</p>
+
+<div class="article-grid">
+
+<div class="article-card">
+
+<h2>The Future of Enterprise Artificial Intelligence</h2>
+
+<p>
+
+Artificial intelligence is rapidly becoming one of the most transformative
+technologies in modern business. Organizations across healthcare, finance,
+manufacturing, logistics, education, and retail are adopting AI to improve
+decision making, automate repetitive work, reduce costs, and uncover insights
+hidden within massive datasets.
+
+</p>
+
+<p>
+
+Modern AI systems are no longer limited to prediction alone. Large language
+models, autonomous AI agents, computer vision, and multimodal intelligence are
+reshaping how employees interact with software. Rather than replacing human
+workers, AI increasingly serves as an intelligent copilot capable of
+summarizing reports, generating code, answering complex questions, and
+automating workflows that previously required hours of manual effort.
+
+</p>
+
+<p>
+
+As enterprise adoption accelerates, organizations must balance innovation with
+responsible AI governance, transparency, cybersecurity, and privacy.
+Responsible deployment will determine which companies become industry leaders
+during the next decade of digital transformation.
+
+</p>
+
+</div>
+
+<div class="article-card">
+
+<h2>Machine Learning in Healthcare</h2>
+
+<p>
+
+Healthcare continues to generate enormous volumes of structured and
+unstructured data through electronic medical records, medical imaging,
+laboratory systems, wearable devices, insurance claims, and patient
+engagement platforms.
+
+</p>
+
+<p>
+
+Machine learning models can analyze this information to identify patients who
+are at greater risk of hospitalization, predict disease progression, optimize
+staffing, improve care coordination, detect fraud, and support physicians with
+clinical decision making.
+
+</p>
+
+<p>
+
+Computer vision algorithms are increasingly capable of detecting abnormalities
+within X-rays, CT scans, MRI images, and pathology slides. While these systems
+are designed to assist clinicians rather than replace them, they provide
+valuable decision support that improves consistency and operational
+efficiency.
+
+</p>
+
+</div>
+
+<div class="article-card">
+
+<h2>Generative AI & Intelligent Automation</h2>
+
+<p>
+
+Generative AI has expanded beyond chatbots into a broad ecosystem of tools
+capable of writing software, generating reports, summarizing meetings,
+translating documents, producing marketing content, and assisting customer
+support teams.
+
+</p>
+
+<p>
+
+Combined with workflow automation, organizations can automate repetitive
+business processes while allowing employees to focus on higher-value strategic
+activities.
+
+</p>
+
+<p>
+
+Future enterprise platforms will increasingly combine language models,
+computer vision, predictive analytics, and autonomous AI agents into unified
+intelligent operating systems.
+
+</p>
+
+</div>
+
+<div class="article-card">
+
+<h2>Computer Vision at Scale</h2>
+
+<p>
+
+Computer vision enables organizations to interpret images and video in real
+time. Manufacturing companies use visual inspection systems to detect product
+defects while retailers analyze customer traffic patterns to optimize store
+layouts.
+
+</p>
+
+<p>
+
+Healthcare organizations leverage image recognition for diagnostic support,
+while logistics providers monitor warehouse operations through intelligent
+camera systems capable of recognizing inventory movement and safety hazards.
+
+</p>
+
+<p>
+
+As GPU performance continues to improve, real-time vision systems will become
+more accurate, affordable, and scalable across nearly every industry.
+
+</p>
+
+</div>
+
+</div>
 
 </section>
 
+</section>
 <!-- CONTACT -->
 <section id="contact">
   <div class="title">Contact Shen AI</div>
@@ -194,17 +1124,121 @@
 
 <script>
 /* GROWTH LINE CHART */
-new Chart(document.getElementById('growthChart'), {
-  type: 'line',
-  data: {
-    labels: ['2022','2023','2024','2025','2026'],
-    datasets: [{
-      label: 'Customers',
-      data: [100, 420, 1100, 2600, 5400],
-      borderColor: '#60a5fa',
-      tension: 0.3
-    }]
-  }
+new Chart(revenueChart,{
+type:'line',
+data:{
+labels:['2021','2022','2023','2024','2025','2026'],
+datasets:[{
+label:'Revenue ($M)',
+data:[8,18,37,64,102,129],
+borderColor:'#3b82f6',
+backgroundColor:'rgba(59,130,246,.25)',
+fill:true,
+tension:.4
+}]
+}
+});
+
+new Chart(predictionChart,{
+type:'bar',
+data:{
+labels:['Jan','Feb','Mar','Apr','May','Jun'],
+datasets:[{
+label:'Predictions (Millions)',
+data:[410,520,640,790,910,1080],
+backgroundColor:'#22c55e'
+}]
+}
+});
+
+new Chart(industryChart,{
+type:'doughnut',
+data:{
+labels:[
+'Healthcare',
+'Finance',
+'Retail',
+'Manufacturing',
+'Government'
+],
+datasets:[{
+data:[35,24,18,13,10],
+backgroundColor:[
+'#3b82f6',
+'#10b981',
+'#f59e0b',
+'#8b5cf6',
+'#ef4444'
+]
+}]
+}
+});
+
+new Chart(accuracyChart,{
+type:'radar',
+data:{
+labels:[
+'NLP',
+'Vision',
+'OCR',
+'Forecasting',
+'Speech',
+'Agents'
+],
+datasets:[{
+label:'Accuracy',
+data:[98,96,95,97,94,99],
+backgroundColor:'rgba(59,130,246,.3)',
+borderColor:'#3b82f6'
+}]
+}
+});
+
+new Chart(employeeChart,{
+type:'line',
+data:{
+labels:[
+'2022',
+'2023',
+'2024',
+'2025',
+'2026'
+],
+datasets:[{
+label:'Employees',
+data:[18,42,73,118,154],
+borderColor:'#10b981',
+backgroundColor:'rgba(16,185,129,.25)',
+fill:true,
+tension:.35
+}]
+}
+});
+
+new Chart(apiChart,{
+type:'bar',
+data:{
+labels:[
+'Authentication',
+'Vision',
+'LLM',
+'Forecasting',
+'Search',
+'Voice'
+],
+datasets:[{
+label:'Millions of API Calls',
+data:[280,640,920,480,350,510],
+backgroundColor:[
+'#3b82f6',
+'#2563eb',
+'#60a5fa',
+'#10b981',
+'#f59e0b',
+'#8b5cf6'
+]
+}]
+}
 });
 
 /* BAR CHART */
