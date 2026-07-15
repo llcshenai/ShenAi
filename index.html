@@ -1,1259 +1,1222 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shen AI - Artificial Intelligence Company</title>
-
-  <!-- Chart.js (REAL WORKING CHARTS) -->
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <link rel="icon" type="image/png" href="https://images.unsplash.com/photo-1677442136019-21780ecad995">
-  <style>
-    .article-grid{
-
-display:grid;
-
-grid-template-columns:repeat(auto-fit,minmax(450px,1fr));
-
-gap:35px;
-
-margin-top:50px;
-
-}
-
-.article-card{
-
-background:#111827;
-
-padding:35px;
-
-border-radius:20px;
-
-transition:.35s;
-
-box-shadow:0 15px 40px rgba(0,0,0,.15);
-
-}
-
-.article-card:hover{
-
-transform:translateY(-8px);
-
-box-shadow:0 20px 45px rgba(37,99,235,.35);
-
-}
-
-.article-card h2{
-
-color:#60a5fa;
-
-margin-bottom:20px;
-
-}
-
-.article-card p{
-
-color:#d1d5db;
-
-line-height:1.9;
-
-font-size:16px;
-
-margin-bottom:20px;
-
-}
-    .kpi-grid{
-
-display:grid;
-
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-
-gap:25px;
-
-margin:50px 0;
-
-}
-
-.kpi-card{
-
-background:#111827;
-
-padding:30px;
-
-border-radius:18px;
-
-text-align:center;
-
-transition:.35s;
-
-}
-
-.kpi-card:hover{
-
-transform:translateY(-8px);
-
-box-shadow:0 20px 40px rgba(37,99,235,.35);
-
-}
-
-.kpi-card h2{
-
-font-size:42px;
-
-color:#60a5fa;
-
-margin-bottom:10px;
-
-}
-
-.kpi-card span{
-
-font-weight:bold;
-
-display:block;
-
-margin-bottom:10px;
-
-}
-
-.dashboard-grid{
-
-display:grid;
-
-grid-template-columns:repeat(auto-fit,minmax(450px,1fr));
-
-gap:30px;
-
-}
-
-.chart-box{
-
-background:#111827;
-
-padding:30px;
-
-border-radius:20px;
-
-box-shadow:0 15px 40px rgba(0,0,0,.2);
-
-}
-    .section-subtitle{
-
-max-width:900px;
-
-margin:auto;
-
-text-align:center;
-
-color:#555;
-
-font-size:18px;
-
-line-height:1.8;
-
-margin-bottom:50px;
-
-}
-
-.products-grid{
-
-display:grid;
-
-grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-
-gap:30px;
-
-padding-top:30px;
-
-}
-
-.product-card{
-
-background:#111827;
-
-padding:35px;
-
-border-radius:20px;
-
-transition:.35s;
-
-box-shadow:0 10px 25px rgba(0,0,0,.15);
-
-}
-
-.product-card:hover{
-
-transform:translateY(-10px);
-
-box-shadow:0 20px 45px rgba(37,99,235,.35);
-
-}
-
-.product-icon{
-
-font-size:42px;
-
-margin-bottom:15px;
-
-}
-
-.product-card h3{
-
-color:#60a5fa;
-
-margin-bottom:15px;
-
-}
-
-.product-card p{
-
-color:#d1d5db;
-
-line-height:1.7;
-
-}
-
-.product-card ul{
-
-margin:20px 0;
-
-padding-left:18px;
-
-color:white;
-
-}
-
-.product-card li{
-
-margin-bottom:10px;
-
-}
-
-.product-card a{
-
-display:inline-block;
-
-margin-top:15px;
-
-text-decoration:none;
-
-color:#60a5fa;
-
-font-weight:bold;
-
-}
-    .hero{
-position:relative;
-height:95vh;
-display:flex;
-justify-content:center;
-align-items:center;
-flex-direction:column;
-overflow:hidden;
-background:
-linear-gradient(135deg,#020617,#0f172a,#1d4ed8);
-}
-
-.hero-overlay{
-position:absolute;
-width:100%;
-height:100%;
-background:
-radial-gradient(circle at top,#3b82f655,transparent 60%);
-}
-
-.navbar{
-
-position:absolute;
-
-top:0;
-
-width:100%;
-
-display:flex;
-
-justify-content:space-between;
-
-align-items:center;
-
-padding:20px 8%;
-
-background:rgba(10,15,30,.55);
-
-backdrop-filter:blur(12px);
-
-box-sizing:border-box;
-
-z-index:100;
-}
-
-.logo{
-
-font-size:28px;
-
-font-weight:bold;
-
-color:white;
-}
-
-.nav-links{
-
-display:flex;
-
-gap:30px;
-
-list-style:none;
-}
-
-.nav-links a{
-
-color:white;
-
-text-decoration:none;
-
-font-weight:600;
-
-transition:.3s;
-}
-
-.nav-links a:hover{
-
-color:#60a5fa;
-}
-
-.hero-content{
-
-position:relative;
-
-z-index:10;
-
-max-width:850px;
-
-text-align:center;
-}
-
-.hero-content h1{
-
-font-size:72px;
-
-margin-bottom:20px;
-
-line-height:1.1;
-}
-
-.hero-content p{
-
-font-size:22px;
-
-opacity:.9;
-
-line-height:1.8;
-}
-
-.hero-buttons{
-
-margin-top:40px;
-
-display:flex;
-
-justify-content:center;
-
-gap:20px;
-}
-
-.btn-primary{
-
-background:#2563eb;
-
-padding:18px 34px;
-
-border-radius:12px;
-
-color:white;
-
-text-decoration:none;
-
-font-weight:bold;
-}
-
-.btn-secondary{
-
-background:transparent;
-
-border:2px solid white;
-
-padding:18px 34px;
-
-border-radius:12px;
-
-color:white;
-
-text-decoration:none;
-}
-
-.stats{
-
-display:grid;
-
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-
-gap:25px;
-
-padding:70px 8%;
-
-background:#08101f;
-}
-
-.stat-card{
-
-background:rgba(255,255,255,.04);
-
-border:1px solid rgba(255,255,255,.08);
-
-padding:35px;
-
-border-radius:18px;
-
-backdrop-filter:blur(18px);
-
-text-align:center;
-
-transition:.35s;
-}
-
-.stat-card:hover{
-
-transform:translateY(-10px);
-
-box-shadow:0 20px 40px rgba(37,99,235,.35);
-}
-
-.stat-card h2{
-
-font-size:46px;
-
-margin:0;
-
-color:#60a5fa;
-}
-
-.stat-card p{
-
-margin-top:10px;
-
-font-size:18px;
-
-color:#d1d5db;
-}
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #ffffff;
-      color: white;
-    }
-
-    header {
-        text-align: center;
-        padding: 80px 20px;
-        background: linear-gradient(135deg, #0f172a, #1d4ed8);
-
-    }
-
-    header h1 {
-      font-size: 5rem;
-      margin-bottom: 10px;
-      box-sizing: border-box;
-    }
-
-    header p {
-      max-width: 700px;
-      margin: auto;
-      opacity: 0.9;
-    }
-
-    .hero-img {
-      width: 100%;
-      max-width: 800px;
-      margin-top: 30px;
-      border-radius: 15px;
-    }
-
-    nav {
-      background: #111827;
-      padding: 15px;
-      text-align: center;
-    }
-
-    nav a {
-      color: white;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    section {
-      padding: 60px 10%;
-    }
-
-    .title {
-        color: rgb(0, 0, 0);
-        text-align: center;
-        font-size: 2rem;
-        margin-bottom: 30px;
-        font-weight: bold;
-    }
-
-    .projects {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-
-    .card {
-      background: #111827;
-      padding: 20px;
-      border-radius: 12px;
-      transition: 0.3s;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-    }
-
-    .card h3 {
-      color: #60a5fa;
-    }
-
-    .dashboard {
-      background: #ffffff;
-      border-radius: 15px;
-      padding: 40px;
-    }
-
-    .chart-box {
-      background: #111827;
-      padding: 50px;
-      border-radius: 12px;
-      margin: 30px 0;
-    }
-
-    footer {
-      text-align: center;
-      padding: 30px;
-      background: #111827;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shen AI — Artificial Intelligence Company</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+<link rel="icon" type="image/png" href="https://images.unsplash.com/photo-1677442136019-21780ecad995">
+
+<style>
+  :root{
+    --bg: #05060c;
+    --surface: #0d1020;
+    --surface-2: #12162b;
+    --border: rgba(148,155,209,0.14);
+    --violet: #7c5cff;
+    --violet-soft: rgba(124,92,255,0.18);
+    --cyan: #22d3ee;
+    --text: #eceefb;
+    --muted: #8b90ab;
+    --mono: 'JetBrains Mono', monospace;
+    --display: 'Space Grotesk', sans-serif;
+    --body: 'Inter', sans-serif;
+  }
+
+  *{ box-sizing:border-box; }
+
+  html{ scroll-behavior:smooth; }
+
+  body{
+    margin:0;
+    font-family:var(--body);
+    background:var(--bg);
+    color:var(--text);
+    -webkit-font-smoothing:antialiased;
+  }
+
+  h1,h2,h3{ font-family:var(--display); margin:0; letter-spacing:-0.01em; }
+
+  a{ color:inherit; }
+
+  ::selection{ background:var(--violet); color:#fff; }
+
+  /* ---------- NAV ---------- */
+  .navbar{
+    position:fixed;
+    top:0; left:0; width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 6%;
+    background:rgba(5,6,12,0.55);
+    backdrop-filter:blur(16px);
+    -webkit-backdrop-filter:blur(16px);
+    border-bottom:1px solid var(--border);
+    z-index:200;
+  }
+
+  .logo{
+    font-family:var(--display);
+    font-size:20px;
+    font-weight:700;
+    letter-spacing:0.02em;
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+
+  .logo .dot{
+    width:9px; height:9px; border-radius:50%;
+    background:var(--cyan);
+    box-shadow:0 0 12px var(--cyan);
+  }
+
+  .nav-links{
+    display:flex;
+    gap:36px;
+    list-style:none;
+    margin:0; padding:0;
+    font-size:14px;
+  }
+
+  .nav-links a{
+    text-decoration:none;
+    color:var(--muted);
+    font-weight:500;
+    transition:color .25s;
+  }
+
+  .nav-links a:hover{ color:var(--text); }
+
+  
+
+  /* ---------- HERO ---------- */
+  .hero{
+    position:relative;
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    overflow:hidden;
+    background:
+      radial-gradient(circle at 80% 20%, rgba(124,92,255,0.18), transparent 45%),
+      radial-gradient(circle at 10% 80%, rgba(34,211,238,0.12), transparent 40%),
+      var(--bg);
+  }
+
+  #hero-canvas{
+    position:absolute;
+    top:0; right:0;
+    width:56%;
+    height:100%;
+    z-index:1;
+    opacity:0.95;
+  }
+
+  .hero-inner{
+    position:relative;
+    z-index:5;
+    width:100%;
+    max-width:1400px;
+    margin:0 auto;
+    padding:140px 6% 100px;
+    display:grid;
+    grid-template-columns:1.1fr 1fr;
+    gap:40px;
+    align-items:center;
+  }
+
+  .eyebrow{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    font-family:var(--mono);
+    font-size:12px;
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+    color:var(--cyan);
+    border:1px solid rgba(34,211,238,0.3);
+    background:rgba(34,211,238,0.06);
+    padding:7px 14px;
+    border-radius:999px;
+    margin-bottom:26px;
+  }
+
+  .hero-content h1{
+    font-size:clamp(40px, 5vw, 66px);
+    line-height:1.06;
+    font-weight:700;
+    margin-bottom:24px;
+  }
+
+  .hero-content h1 span{
+    background:linear-gradient(100deg, var(--violet), var(--cyan));
+    -webkit-background-clip:text;
+    background-clip:text;
+    color:transparent;
+  }
+
+  .hero-content p{
+    font-size:17px;
+    line-height:1.75;
+    color:var(--muted);
+    max-width:520px;
+    margin-bottom:40px;
+  }
+
+  .hero-buttons{ display:flex; gap:16px; flex-wrap:wrap; }
+
+  .btn-primary{
+    background:linear-gradient(100deg, var(--violet), #5b3df0);
+    padding:16px 30px;
+    border-radius:12px;
+    color:white;
+    text-decoration:none;
+    font-weight:600;
+    font-size:15px;
+    box-shadow:0 12px 30px rgba(124,92,255,.35);
+    transition:transform .25s, box-shadow .25s;
+  }
+  .btn-primary:hover{ transform:translateY(-3px); box-shadow:0 16px 36px rgba(124,92,255,.5); }
+
+  .btn-secondary{
+    background:transparent;
+    border:1px solid var(--border);
+    padding:16px 30px;
+    border-radius:12px;
+    color:var(--text);
+    text-decoration:none;
+    font-weight:600;
+    font-size:15px;
+    transition:.25s;
+  }
+  .btn-secondary:hover{ border-color:var(--cyan); color:var(--cyan); }
+
+  /* ---------- STATS ---------- */
+  .stats{
+    position:relative;
+    z-index:5;
+    display:grid;
+    grid-template-columns:repeat(6,1fr);
+    gap:1px;
+    background:var(--border);
+    border-top:1px solid var(--border);
+    border-bottom:1px solid var(--border);
+  }
+
+  .stat-card{
+    background:var(--bg);
+    padding:34px 20px;
+    text-align:left;
+  }
+
+  .stat-card h2{
+    font-family:var(--mono);
+    font-size:30px;
+    color:var(--text);
+    font-weight:500;
+  }
+
+  .stat-card p{
+    margin-top:8px;
+    font-size:13px;
+    color:var(--muted);
+  }
+
+  /* ---------- SECTION SHARED ---------- */
+  section{ padding:110px 6%; max-width:1400px; margin:0 auto; }
+
+  .eyebrow-label{
+    font-family:var(--mono);
+    font-size:12px;
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+    color:var(--violet);
+    margin-bottom:14px;
+    display:block;
+  }
+
+  .title{
+    color:var(--text);
+    font-size:clamp(28px,3.4vw,42px);
+    font-weight:700;
+    margin-bottom:20px;
+    max-width:700px;
+  }
+
+  .section-subtitle{
+    max-width:680px;
+    color:var(--muted);
+    font-size:16px;
+    line-height:1.8;
+    margin-bottom:56px;
+  }
+
+  #about .section-subtitle{ text-align:left; margin-left:0; }
+
+  /* ---------- PRODUCTS ---------- */
+  .products-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:24px;
+  }
+
+  .product-card{
+    position:relative;
+    background:linear-gradient(160deg, var(--surface), var(--surface-2));
+    border:1px solid var(--border);
+    padding:32px;
+    border-radius:16px;
+    transform-style:preserve-3d;
+    transition:transform .12s ease, border-color .3s;
+    will-change:transform;
+  }
+
+  .product-card:hover{ border-color:rgba(124,92,255,0.5); }
+
+  .product-card::before{
+    content:'';
+    position:absolute;
+    inset:0;
+    border-radius:16px;
+    background:radial-gradient(300px circle at var(--mx,50%) var(--my,50%), rgba(124,92,255,0.12), transparent 60%);
+    opacity:0;
+    transition:opacity .3s;
+    pointer-events:none;
+  }
+  .product-card:hover::before{ opacity:1; }
+
+  .product-icon{
+    font-size:30px;
+    margin-bottom:18px;
+    display:inline-block;
+    transform:translateZ(30px);
+  }
+
+  .product-card h3{
+    color:var(--text);
+    font-size:19px;
+    margin-bottom:12px;
+    transform:translateZ(20px);
+  }
+
+  .product-card p{
+    color:var(--muted);
+    line-height:1.7;
+    font-size:14.5px;
+    transform:translateZ(15px);
+  }
+
+  .product-card ul{
+    margin:20px 0 6px;
+    padding-left:0;
+    list-style:none;
+    color:var(--text);
+    font-size:13.5px;
+    transform:translateZ(15px);
+  }
+
+  .product-card li{
+    margin-bottom:9px;
+    color:var(--muted);
+    display:flex;
+    gap:8px;
+    align-items:baseline;
+  }
+  .product-card li::before{
+    content:'';
+    width:5px; height:5px;
+    border-radius:50%;
+    background:var(--cyan);
+    display:inline-block;
+    flex-shrink:0;
+  }
+
+  .product-card .learn-more-btn{
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    margin-top:12px;
+    text-decoration:none;
+    color:var(--cyan);
+    font-weight:600;
+    font-size:13.5px;
+    transform:translateZ(20px);
+    background:none;
+    border:none;
+    font-family:var(--body);
+    cursor:pointer;
+    padding:0;
+    transition:gap .2s, color .2s;
+  }
+  .product-card .learn-more-btn:hover{ gap:10px; color:var(--text); }
+
+  /* ---------- DASHBOARD ---------- */
+  .kpi-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+    margin-bottom:40px;
+  }
+
+  .kpi-card{
+    background:var(--surface);
+    border:1px solid var(--border);
+    padding:28px;
+    border-radius:14px;
+    transition:transform .3s, border-color .3s;
+  }
+  .kpi-card:hover{ transform:translateY(-6px); border-color:rgba(34,211,238,0.4); }
+
+  .kpi-card h2{
+    font-family:var(--mono);
+    font-size:32px;
+    color:var(--cyan);
+    font-weight:500;
+  }
+
+  .kpi-card span{
+    font-weight:600;
+    display:block;
+    margin:8px 0 4px;
+    color:var(--text);
+    font-size:14px;
+  }
+  .kpi-card p{ color:var(--muted); font-size:13px; margin:0; }
+
+  .dashboard-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(430px,1fr));
+    gap:24px;
+  }
+
+  .chart-box{
+    background:var(--surface);
+    border:1px solid var(--border);
+    padding:28px;
+    border-radius:16px;
+  }
+
+  .chart-box h3{
+    color:var(--text);
+    font-size:16px;
+    margin-bottom:18px;
+    font-weight:600;
+  }
+
+  /* ---------- RESEARCH ---------- */
+  .article-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(440px,1fr));
+    gap:24px;
+  }
+
+  .article-card{
+    background:var(--surface);
+    border:1px solid var(--border);
+    padding:34px;
+    border-radius:16px;
+    transition:.3s;
+  }
+  .article-card:hover{ border-color:rgba(124,92,255,0.4); transform:translateY(-4px); }
+
+  .article-card h2{
+    color:var(--text);
+    font-size:20px;
+    margin-bottom:18px;
+  }
+
+  .article-card p{
+    color:var(--muted);
+    line-height:1.85;
+    font-size:14.5px;
+    margin-bottom:16px;
+  }
+
+  /* ---------- CONTACT / FOOTER ---------- */
+  #contact{ text-align:center; }
+  #contact .title{ margin:0 auto 16px; }
+  #contact p{ color:var(--muted); font-family:var(--mono); font-size:15px; }
+
+  footer{
+    text-align:center;
+    padding:36px;
+    border-top:1px solid var(--border);
+    color:var(--muted);
+    font-size:13px;
+  }
+
+  /* ---------- PRODUCT 3D MODAL ---------- */
+  .product-modal{
+    display:none;
+    position:fixed;
+    inset:0;
+    z-index:1000;
+    background:rgba(5,6,12,0.75);
+    backdrop-filter:blur(8px);
+    -webkit-backdrop-filter:blur(8px);
+    align-items:center;
+    justify-content:center;
+    padding:20px;
+  }
+
+  .product-modal-content{
+    position:relative;
+    width:100%;
+    max-width:920px;
+    max-height:88vh;
+    overflow-y:auto;
+    background:linear-gradient(160deg, var(--surface), var(--surface-2));
+    border:1px solid var(--border);
+    border-radius:20px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    box-shadow:0 40px 100px rgba(0,0,0,.55);
+  }
+
+  .product-modal-visual{
+    position:relative;
+    min-height:340px;
+    border-right:1px solid var(--border);
+    background:
+      radial-gradient(circle at 30% 30%, rgba(124,92,255,0.16), transparent 55%),
+      radial-gradient(circle at 70% 70%, rgba(34,211,238,0.12), transparent 55%);
+  }
+
+  .product-modal-visual canvas{
+    width:100% !important;
+    height:100% !important;
+    display:block;
+  }
+
+  .product-modal-tag{
+    position:absolute;
+    top:20px; left:20px;
+    font-family:var(--mono);
+    font-size:11px;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    color:var(--cyan);
+    background:rgba(34,211,238,0.08);
+    border:1px solid rgba(34,211,238,0.3);
+    padding:6px 12px;
+    border-radius:999px;
+    z-index:2;
+  }
+
+  .product-modal-body{
+    padding:38px 34px;
+  }
+
+  .product-modal-icon{ font-size:32px; margin-bottom:14px; display:block; }
+
+  .product-modal-body h2{
+    color:var(--text);
+    font-size:24px;
+    margin-bottom:14px;
+    padding-right:20px;
+  }
+
+  .product-modal-body p{
+    color:var(--muted);
+    line-height:1.8;
+    font-size:14.5px;
+    margin-bottom:20px;
+  }
+
+  .product-modal-body h3{
+    color:var(--cyan);
+    font-size:12.5px;
+    text-transform:uppercase;
+    letter-spacing:0.08em;
+    font-family:var(--mono);
+    margin:0 0 12px;
+    font-weight:500;
+  }
+
+  .product-modal-body ul{
+    list-style:none;
+    margin:0 0 6px;
+    padding:0;
+  }
+
+  .product-modal-body li{
+    color:var(--text);
+    font-size:14px;
+    margin-bottom:10px;
+    padding-left:18px;
+    position:relative;
+  }
+  .product-modal-body li::before{
+    content:'';
+    width:5px; height:5px;
+    border-radius:50%;
+    background:var(--violet);
+    position:absolute;
+    left:0;
+    top:8px;
+  }
+
+  .product-modal-close{
+    position:absolute;
+    top:18px; right:22px;
+    font-size:26px;
+    color:var(--muted);
+    cursor:pointer;
+    z-index:3;
+    line-height:1;
+    transition:color .2s;
+    background:none;
+    border:none;
+  }
+  .product-modal-close:hover{ color:var(--text); }
+
+  @media (max-width: 760px){
+    .product-modal-content{ grid-template-columns:1fr; }
+    .product-modal-visual{ min-height:220px; border-right:none; border-bottom:1px solid var(--border); }
+  }
+
+  @media (max-width: 900px){
+    .nav-links{ display:none; }
+    .hero-inner{ grid-template-columns:1fr; padding-top:120px; }
+    #hero-canvas{ width:100%; opacity:0.35; }
+    .stats{ grid-template-columns:repeat(2,1fr); }
+  }
+</style>
 </head>
 
 <body>
-<header class="hero">
-
-<div class="hero-overlay"></div>
 
 <nav class="navbar">
-
-<div class="logo">
-<h2>SHEN AI</h2>
-</div>
-
-<ul class="nav-links">
-<li><a href="#about">About</a></li>
-<li><a href="#products">Products</a></li>
-<li><a href="#dashboard">Analytics</a></li>
-<li><a href="#research">Research</a></li>
-<!-- <li><a href="#news">News</a></li> -->
-<li><a href="careers.html">Careers</a></li>
-<li><a href="#contact">Contact</a></li>
-</ul>
+  <div class="logo"><span class="dot"></span>SHEN AI</div>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#products">Products</a></li>
+    <li><a href="#dashboard">Analytics</a></li>
+    <li><a href="#research">Research</a></li>
+    <li><a href="careers.html">Careers</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
 
 </nav>
 
-<div class="hero-content">
-
-<h1>Building the Future of Artificial Intelligence</h1>
-
-<p>
-Enterprise AI solutions designed to automate workflows,
-accelerate innovation, predict business outcomes,
-and empower organizations with next-generation
-machine learning technologies.
-</p>
-
-<div class="hero-buttons">
-
-<a href="#products" class="btn-primary">
-Explore Products
-</a>
-
-<a href="careers.html" class="btn-secondary">
-Join Our Team
-</a>
-
-</div>
-
-</div>
-
+<header class="hero">
+  <canvas id="hero-canvas"></canvas>
+  <div class="hero-inner">
+    <div class="hero-content">
+      <span class="eyebrow">● Live across 18 countries</span>
+      <h1>Building the future of <span>artificial intelligence</span></h1>
+      <p>
+        Enterprise AI solutions designed to automate workflows, accelerate
+        innovation, predict business outcomes, and empower organizations with
+        next-generation machine learning technologies.
+      </p>
+      <div class="hero-buttons">
+        <a href="#products" class="btn-primary">Explore Products</a>
+        <a href="careers.html" class="btn-secondary">Join Our Team</a>
+      </div>
+    </div>
+    <div></div>
+  </div>
 </header>
 
-<section class="stats">
-
-<div class="stat-card">
-<h2>250+</h2>
-<p>Enterprise Clients</p>
-</div>
-
-<div class="stat-card">
-<h2>18</h2>
-<p>Countries Served</p>
-</div>
-
-<div class="stat-card">
-<h2>99.98%</h2>
-<p>Cloud Uptime</p>
-</div>
-
-<div class="stat-card">
-<h2>12.4B</h2>
-<p>AI Predictions</p>
-</div>
-
-<div class="stat-card">
-<h2>154</h2>
-<p>AI Engineers</p>
-</div>
-
-<div class="stat-card">
-<h2>98.7%</h2>
-<p>Model Accuracy</p>
-</div>
-
+<section class="stats" style="padding:0; max-width:none;">
+  <div class="stat-card"><h2>250+</h2><p>Enterprise Clients</p></div>
+  <div class="stat-card"><h2>18</h2><p>Countries Served</p></div>
+  <div class="stat-card"><h2>99.98%</h2><p>Cloud Uptime</p></div>
+  <div class="stat-card"><h2>12.4B</h2><p>AI Predictions</p></div>
+  <div class="stat-card"><h2>154</h2><p>AI Engineers</p></div>
+  <div class="stat-card"><h2>98.7%</h2><p>Model Accuracy</p></div>
 </section>
+
 <!-- ABOUT -->
 <section id="about">
+  <span class="eyebrow-label">// About</span>
   <div class="title">About Shen AI</div>
-  <p style="text-align:center; color:black;">Shen AI is an innovative artificial intelligence company focused on developing advanced machine learning, automation, and predictive intelligence technologies. Our mission is to make AI accessible, reliable, and impactful for organizations around the globe.</p>
+  <p class="section-subtitle">
+    Shen AI is an innovative artificial intelligence company focused on
+    developing advanced machine learning, automation, and predictive
+    intelligence technologies. Our mission is to make AI accessible,
+    reliable, and impactful for organizations around the globe.
+  </p>
 </section>
 
-
-<!-- PROJECTS --><!-- PRODUCTS -->
-
+<!-- PRODUCTS -->
 <section id="products">
-
-<div class="title">Enterprise AI Solutions</div>
-
-<p class="section-subtitle">
-Our portfolio of enterprise-grade AI products helps organizations automate
-operations, uncover insights, and accelerate digital transformation through
-machine learning, generative AI, and intelligent automation.
-</p>
-
-<div class="products-grid">
-
-<div class="product-card">
-<div class="product-icon">🧠</div>
-<h3>SHEN GPT Enterprise</h3>
-<p>Private large language model platform for secure enterprise knowledge management, document analysis, and AI copilots.</p>
-
-<ul>
-<li>✓ Secure Enterprise Chat</li>
-<li>✓ Knowledge Base Search</li>
-<li>✓ API Integration</li>
-<li>✓ RAG Architecture</li>
-</ul>
-
-<a href="#">Learn More →</a>
-</div>
-
-<div class="product-card">
-
-<div class="product-icon">📊</div>
-
-<h3>PredictSphere</h3>
-
-<p>
-Advanced predictive analytics platform capable of forecasting sales,
-customer behavior, demand, and financial trends using machine learning.
-</p>
-
-<ul>
-
-<li>✓ Forecasting</li>
-
-<li>✓ Time Series Models</li>
-
-<li>✓ AI Reports</li>
-
-<li>✓ Business Intelligence</li>
-
-</ul>
-
-<a href="#">Learn More →</a>
-
-</div>
-
-<div class="product-card">
-
-<div class="product-icon">👁️</div>
-
-<h3>VisionAI</h3>
-
-<p>
-Computer vision platform for manufacturing, healthcare,
-retail analytics and quality inspection.
-</p>
-
-<ul>
-
-<li>✓ Image Recognition</li>
-
-<li>✓ Object Detection</li>
-
-<li>✓ OCR</li>
-
-<li>✓ Video Analytics</li>
-
-</ul>
-
-<a href="#">Learn More →</a>
-
-</div>
-
-<div class="product-card">
-
-<div class="product-icon">🤖</div>
-
-<h3>AutoMind</h3>
-
-<p>
-Enterprise workflow automation platform powered by intelligent AI agents.
-</p>
-
-<ul>
-
-<li>✓ AI Agents</li>
-
-<li>✓ Workflow Builder</li>
-
-<li>✓ Automation</li>
-
-<li>✓ API Connectors</li>
-
-</ul>
-
-<a href="#">Learn More →</a>
-
-</div>
-
-<div class="product-card">
-
-<div class="product-icon">💬</div>
-
-<h3>LinguaFlow</h3>
-
-<p>
-Real-time multilingual language model supporting over 120 languages.
-</p>
-
-<ul>
-
-<li>✓ Translation</li>
-
-<li>✓ Summarization</li>
-
-<li>✓ Speech Recognition</li>
-
-<li>✓ Voice AI</li>
-
-</ul>
-
-<a href="#">Learn More →</a>
-
-</div>
-
-<div class="product-card">
-
-<div class="product-icon">🏥</div>
-
-<h3>MedicalScan AI</h3>
-
-<p>
-AI-powered healthcare platform assisting clinicians with medical imaging,
-risk prediction and patient analytics.
-</p>
-
-<ul>
-
-<li>✓ Medical Imaging</li>
-
-<li>✓ Risk Prediction</li>
-
-<li>✓ Clinical AI</li>
-
-<li>✓ Decision Support</li>
-
-</ul>
-
-<a href="#">Learn More →</a>
-
-</div>
-
-<div class="product-card">
-
-<div class="product-icon">💰</div>
-
-<h3>FinanceIQ</h3>
-
-<p>
-Fraud detection and intelligent financial forecasting powered by deep learning.
-</p>
-
-<ul>
-
-<li>✓ Fraud Detection</li>
-
-<li>✓ Credit Risk</li>
-
-<li>✓ Compliance</li>
-
-<li>✓ Forecasting</li>
-
-</ul>
-
-<a href="#">Learn More →</a>
-
-</div>
-
-<div class="product-card">
-
-<div class="product-icon">🔒</div>
-
-<h3>CyberShield AI</h3>
-
-<p>
-AI cybersecurity platform providing anomaly detection,
-network monitoring and automated threat response.
-</p>
-
-<ul>
-
-<li>✓ Threat Detection</li>
-
-<li>✓ SIEM</li>
-
-<li>✓ Zero Trust</li>
-
-<li>✓ AI Monitoring</li>
-
-</ul>
-
-<a href="#">Learn More →</a>
-
-</div>
-
-<div class="product-card">
-
-<div class="product-icon">👨‍💻</div>
-
-<h3>CodePilot</h3>
-
-<p>
-AI software engineering assistant helping developers write,
-review and optimize production-quality code.
-</p>
-
-<ul>
-
-<li>✓ Code Generation</li>
-
-<li>✓ Debugging</li>
-
-<li>✓ Documentation</li>
-
-<li>✓ Code Review</li>
-
-</ul>
-
-<a href="#">Learn More →</a>
-
-</div>
-
-</div>
-
+  <span class="eyebrow-label">// Products</span>
+  <div class="title">Enterprise AI Solutions</div>
+  <p class="section-subtitle">
+    Our portfolio of enterprise-grade AI products helps organizations
+    automate operations, uncover insights, and accelerate digital
+    transformation through machine learning, generative AI, and intelligent
+    automation.
+  </p>
+
+  <div class="products-grid" id="productsGrid"></div>
 </section>
 
 <!-- DASHBOARD -->
- 
-<!-- DASHBOARD -->
+<section id="dashboard">
+  <span class="eyebrow-label">// Analytics</span>
+  <div class="title">Shen AI Enterprise Analytics</div>
+  <p class="section-subtitle">
+    Real-time metrics demonstrating AI platform performance, customer growth,
+    model accuracy, and enterprise adoption across multiple industries.
+  </p>
 
-<section id="dashboard" class="dashboard">
+  <div class="kpi-grid">
+    <div class="kpi-card"><h2>$128.6M</h2><span>Annual Revenue</span><p>▲ 41% YoY Growth</p></div>
+    <div class="kpi-card"><h2>98.7%</h2><span>AI Accuracy</span><p>Across All Models</p></div>
+    <div class="kpi-card"><h2>12.4B</h2><span>Predictions</span><p>Generated This Year</p></div>
+    <div class="kpi-card"><h2>2.8M</h2><span>Monthly Users</span><p>Growing Every Month</p></div>
+  </div>
 
-<div class="title">SHEN AI Enterprise Analytics</div>
+  <div class="dashboard-grid">
+    <div class="chart-box"><h3>Annual Revenue Growth</h3><canvas id="revenueChart"></canvas></div>
+    <div class="chart-box"><h3>Monthly AI Predictions</h3><canvas id="predictionChart"></canvas></div>
+    <div class="chart-box"><h3>Industry Distribution</h3><canvas id="industryChart"></canvas></div>
+    <div class="chart-box"><h3>AI Model Accuracy</h3><canvas id="accuracyChart"></canvas></div>
+    <div class="chart-box"><h3>Employee Growth</h3><canvas id="employeeChart"></canvas></div>
+    <div class="chart-box"><h3>API Requests</h3><canvas id="apiChart"></canvas></div>
+  </div>
+</section>
 
-<p class="section-subtitle">
-Real-time metrics demonstrating AI platform performance, customer growth,
-model accuracy, and enterprise adoption across multiple industries.
-</p>
-
-<div class="kpi-grid">
-
-<div class="kpi-card">
-<h2>$128.6M</h2>
-<span>Annual Revenue</span>
-<p>▲ 41% YoY Growth</p>
-</div>
-
-<div class="kpi-card">
-<h2>98.7%</h2>
-<span>AI Accuracy</span>
-<p>Across All Models</p>
-</div>
-
-<div class="kpi-card">
-<h2>12.4B</h2>
-<span>Predictions</span>
-<p>Generated This Year</p>
-</div>
-
-<div class="kpi-card">
-<h2>2.8M</h2>
-<span>Monthly Users</span>
-<p>Growing Every Month</p>
-</div>
-
-</div>
-
-
-<div class="dashboard-grid">
-
-<div class="chart-box">
-<h3>Annual Revenue Growth</h3>
-<canvas id="revenueChart"></canvas>
-</div>
-
-<div class="chart-box">
-<h3>Monthly AI Predictions</h3>
-<canvas id="predictionChart"></canvas>
-</div>
-
-<div class="chart-box">
-<h3>Industry Distribution</h3>
-<canvas id="industryChart"></canvas>
-</div>
-
-<div class="chart-box">
-<h3>AI Model Accuracy</h3>
-<canvas id="accuracyChart"></canvas>
-</div>
-
-<div class="chart-box">
-<h3>Employee Growth</h3>
-<canvas id="employeeChart"></canvas>
-</div>
-
-<div class="chart-box">
-<h3>API Requests</h3>
-<canvas id="apiChart"></canvas>
-</div>
-
-</div>
-
-<!-- ===================== -->
-<!-- AI RESEARCH -->
-<!-- ===================== -->
-
+<!-- RESEARCH -->
 <section id="research">
+  <span class="eyebrow-label">// Research</span>
+  <div class="title">AI Research & Insights</div>
+  <p class="section-subtitle">
+    At Shen AI, our research focuses on practical artificial intelligence
+    that helps organizations solve real-world business challenges through
+    advanced machine learning, generative AI, computer vision, and
+    intelligent automation.
+  </p>
 
-<div class="title">
-AI Research & Insights
-</div>
+  <div class="article-grid">
 
-<p class="section-subtitle">
-At SHEN AI, our research focuses on practical artificial intelligence that
-helps organizations solve real-world business challenges through advanced
-machine learning, generative AI, computer vision, and intelligent automation.
-</p>
+    <div class="article-card">
+      <h2>The Future of Enterprise Artificial Intelligence</h2>
+      <p>Artificial intelligence is rapidly becoming one of the most transformative technologies in modern business. Organizations across healthcare, finance, manufacturing, logistics, education, and retail are adopting AI to improve decision making, automate repetitive work, reduce costs, and uncover insights hidden within massive datasets.</p>
+      <p>Modern AI systems are no longer limited to prediction alone. Large language models, autonomous AI agents, computer vision, and multimodal intelligence are reshaping how employees interact with software. Rather than replacing human workers, AI increasingly serves as an intelligent copilot capable of summarizing reports, generating code, answering complex questions, and automating workflows that previously required hours of manual effort.</p>
+      <p>As enterprise adoption accelerates, organizations must balance innovation with responsible AI governance, transparency, cybersecurity, and privacy. Responsible deployment will determine which companies become industry leaders during the next decade of digital transformation.</p>
+    </div>
 
-<div class="article-grid">
+    <div class="article-card">
+      <h2>Machine Learning in Healthcare</h2>
+      <p>Healthcare continues to generate enormous volumes of structured and unstructured data through electronic medical records, medical imaging, laboratory systems, wearable devices, insurance claims, and patient engagement platforms.</p>
+      <p>Machine learning models can analyze this information to identify patients who are at greater risk of hospitalization, predict disease progression, optimize staffing, improve care coordination, detect fraud, and support physicians with clinical decision making.</p>
+      <p>Computer vision algorithms are increasingly capable of detecting abnormalities within X-rays, CT scans, MRI images, and pathology slides. While these systems are designed to assist clinicians rather than replace them, they provide valuable decision support that improves consistency and operational efficiency.</p>
+    </div>
 
-<div class="article-card">
+    <div class="article-card">
+      <h2>Generative AI & Intelligent Automation</h2>
+      <p>Generative AI has expanded beyond chatbots into a broad ecosystem of tools capable of writing software, generating reports, summarizing meetings, translating documents, producing marketing content, and assisting customer support teams.</p>
+      <p>Combined with workflow automation, organizations can automate repetitive business processes while allowing employees to focus on higher-value strategic activities.</p>
+      <p>Future enterprise platforms will increasingly combine language models, computer vision, predictive analytics, and autonomous AI agents into unified intelligent operating systems.</p>
+    </div>
 
-<h2>The Future of Enterprise Artificial Intelligence</h2>
+    <div class="article-card">
+      <h2>Computer Vision at Scale</h2>
+      <p>Computer vision enables organizations to interpret images and video in real time. Manufacturing companies use visual inspection systems to detect product defects while retailers analyze customer traffic patterns to optimize store layouts.</p>
+      <p>Healthcare organizations leverage image recognition for diagnostic support, while logistics providers monitor warehouse operations through intelligent camera systems capable of recognizing inventory movement and safety hazards.</p>
+      <p>As GPU performance continues to improve, real-time vision systems will become more accurate, affordable, and scalable across nearly every industry.</p>
+    </div>
 
-<p>
-
-Artificial intelligence is rapidly becoming one of the most transformative
-technologies in modern business. Organizations across healthcare, finance,
-manufacturing, logistics, education, and retail are adopting AI to improve
-decision making, automate repetitive work, reduce costs, and uncover insights
-hidden within massive datasets.
-
-</p>
-
-<p>
-
-Modern AI systems are no longer limited to prediction alone. Large language
-models, autonomous AI agents, computer vision, and multimodal intelligence are
-reshaping how employees interact with software. Rather than replacing human
-workers, AI increasingly serves as an intelligent copilot capable of
-summarizing reports, generating code, answering complex questions, and
-automating workflows that previously required hours of manual effort.
-
-</p>
-
-<p>
-
-As enterprise adoption accelerates, organizations must balance innovation with
-responsible AI governance, transparency, cybersecurity, and privacy.
-Responsible deployment will determine which companies become industry leaders
-during the next decade of digital transformation.
-
-</p>
-
-</div>
-
-<div class="article-card">
-
-<h2>Machine Learning in Healthcare</h2>
-
-<p>
-
-Healthcare continues to generate enormous volumes of structured and
-unstructured data through electronic medical records, medical imaging,
-laboratory systems, wearable devices, insurance claims, and patient
-engagement platforms.
-
-</p>
-
-<p>
-
-Machine learning models can analyze this information to identify patients who
-are at greater risk of hospitalization, predict disease progression, optimize
-staffing, improve care coordination, detect fraud, and support physicians with
-clinical decision making.
-
-</p>
-
-<p>
-
-Computer vision algorithms are increasingly capable of detecting abnormalities
-within X-rays, CT scans, MRI images, and pathology slides. While these systems
-are designed to assist clinicians rather than replace them, they provide
-valuable decision support that improves consistency and operational
-efficiency.
-
-</p>
-
-</div>
-
-<div class="article-card">
-
-<h2>Generative AI & Intelligent Automation</h2>
-
-<p>
-
-Generative AI has expanded beyond chatbots into a broad ecosystem of tools
-capable of writing software, generating reports, summarizing meetings,
-translating documents, producing marketing content, and assisting customer
-support teams.
-
-</p>
-
-<p>
-
-Combined with workflow automation, organizations can automate repetitive
-business processes while allowing employees to focus on higher-value strategic
-activities.
-
-</p>
-
-<p>
-
-Future enterprise platforms will increasingly combine language models,
-computer vision, predictive analytics, and autonomous AI agents into unified
-intelligent operating systems.
-
-</p>
-
-</div>
-
-<div class="article-card">
-
-<h2>Computer Vision at Scale</h2>
-
-<p>
-
-Computer vision enables organizations to interpret images and video in real
-time. Manufacturing companies use visual inspection systems to detect product
-defects while retailers analyze customer traffic patterns to optimize store
-layouts.
-
-</p>
-
-<p>
-
-Healthcare organizations leverage image recognition for diagnostic support,
-while logistics providers monitor warehouse operations through intelligent
-camera systems capable of recognizing inventory movement and safety hazards.
-
-</p>
-
-<p>
-
-As GPU performance continues to improve, real-time vision systems will become
-more accurate, affordable, and scalable across nearly every industry.
-
-</p>
-
-</div>
-
-</div>
-
+  </div>
 </section>
 
-</section>
 <!-- CONTACT -->
 <section id="contact">
+  <span class="eyebrow-label">// Contact</span>
   <div class="title">Contact Shen AI</div>
-  <p style="text-align:center; color:black;">contact@shenai.com</p>
+  <p>contact@shenai.com</p>
 </section>
 
+<footer>© 2026 Shen AI. All rights reserved.</footer>
 
-<footer>
-  © 2026 Shen AI. All rights reserved.
-</footer>
+<!-- PRODUCT 3D MODAL -->
+<div class="product-modal" id="productModal">
+  <div class="product-modal-content">
+    <button class="product-modal-close" onclick="closeProductModal()">&times;</button>
+    <div class="product-modal-visual">
+      <span class="product-modal-tag" id="modalTag">3D Preview</span>
+      <canvas id="productModalCanvas"></canvas>
+    </div>
+    <div class="product-modal-body">
+      <span class="product-modal-icon" id="modalIcon"></span>
+      <h2 id="modalTitle"></h2>
+      <p id="modalDescription"></p>
+      <h3>Capabilities</h3>
+      <ul id="modalFeatures"></ul>
+    </div>
+  </div>
+</div>
 
 <script>
-/* GROWTH LINE CHART */
+/* ================= THEMED CHART DEFAULTS ================= */
+Chart.defaults.color = '#8b90ab';
+Chart.defaults.font.family = "'Inter', sans-serif";
+Chart.defaults.borderColor = 'rgba(148,155,209,0.12)';
+
 new Chart(revenueChart,{
-type:'line',
-data:{
-labels:['2021','2022','2023','2024','2025','2026'],
-datasets:[{
-label:'Revenue ($M)',
-data:[8,18,37,64,102,129],
-borderColor:'#3b82f6',
-backgroundColor:'rgba(59,130,246,.25)',
-fill:true,
-tension:.4
-}]
-}
+  type:'line',
+  data:{
+    labels:['2021','2022','2023','2024','2025','2026'],
+    datasets:[{
+      label:'Revenue ($M)',
+      data:[8,18,37,64,102,129],
+      borderColor:'#7c5cff',
+      backgroundColor:'rgba(124,92,255,.2)',
+      fill:true,
+      tension:.4,
+      pointBackgroundColor:'#7c5cff'
+    }]
+  },
+  options:{ plugins:{legend:{display:false}} }
 });
 
 new Chart(predictionChart,{
-type:'bar',
-data:{
-labels:['Jan','Feb','Mar','Apr','May','Jun'],
-datasets:[{
-label:'Predictions (Millions)',
-data:[410,520,640,790,910,1080],
-backgroundColor:'#22c55e'
-}]
-}
+  type:'bar',
+  data:{
+    labels:['Jan','Feb','Mar','Apr','May','Jun'],
+    datasets:[{
+      label:'Predictions (Millions)',
+      data:[410,520,640,790,910,1080],
+      backgroundColor:'#22d3ee',
+      borderRadius:6
+    }]
+  },
+  options:{ plugins:{legend:{display:false}} }
 });
 
 new Chart(industryChart,{
-type:'doughnut',
-data:{
-labels:[
-'Healthcare',
-'Finance',
-'Retail',
-'Manufacturing',
-'Government'
-],
-datasets:[{
-data:[35,24,18,13,10],
-backgroundColor:[
-'#3b82f6',
-'#10b981',
-'#f59e0b',
-'#8b5cf6',
-'#ef4444'
-]
-}]
-}
-});
-
-new Chart(accuracyChart,{
-type:'radar',
-data:{
-labels:[
-'NLP',
-'Vision',
-'OCR',
-'Forecasting',
-'Speech',
-'Agents'
-],
-datasets:[{
-label:'Accuracy',
-data:[98,96,95,97,94,99],
-backgroundColor:'rgba(59,130,246,.3)',
-borderColor:'#3b82f6'
-}]
-}
-});
-
-new Chart(employeeChart,{
-type:'line',
-data:{
-labels:[
-'2022',
-'2023',
-'2024',
-'2025',
-'2026'
-],
-datasets:[{
-label:'Employees',
-data:[18,42,73,118,154],
-borderColor:'#10b981',
-backgroundColor:'rgba(16,185,129,.25)',
-fill:true,
-tension:.35
-}]
-}
-});
-
-new Chart(apiChart,{
-type:'bar',
-data:{
-labels:[
-'Authentication',
-'Vision',
-'LLM',
-'Forecasting',
-'Search',
-'Voice'
-],
-datasets:[{
-label:'Millions of API Calls',
-data:[280,640,920,480,350,510],
-backgroundColor:[
-'#3b82f6',
-'#2563eb',
-'#60a5fa',
-'#10b981',
-'#f59e0b',
-'#8b5cf6'
-]
-}]
-}
-});
-
-/* BAR CHART */
-new Chart(document.getElementById('productivityChart'), {
-  type: 'bar',
-  data: {
-    labels: ['NeuraVision','LinguaFlow','PredictSphere','AutoMind'],
-    datasets: [{
-      label: 'Efficiency %',
-      data: [45, 40, 52, 70],
-      backgroundColor: '#34d399'
+  type:'doughnut',
+  data:{
+    labels:['Healthcare','Finance','Retail','Manufacturing','Government'],
+    datasets:[{
+      data:[35,24,18,13,10],
+      backgroundColor:['#7c5cff','#22d3ee','#f59e0b','#10b981','#ef4444'],
+      borderColor:'#0d1020',
+      borderWidth:3
     }]
   }
 });
 
+new Chart(accuracyChart,{
+  type:'radar',
+  data:{
+    labels:['NLP','Vision','OCR','Forecasting','Speech','Agents'],
+    datasets:[{
+      label:'Accuracy',
+      data:[98,96,95,97,94,99],
+      backgroundColor:'rgba(124,92,255,.25)',
+      borderColor:'#7c5cff',
+      pointBackgroundColor:'#7c5cff'
+    }]
+  },
+  options:{
+    scales:{ r:{ grid:{color:'rgba(148,155,209,0.12)'}, angleLines:{color:'rgba(148,155,209,0.12)'}, pointLabels:{color:'#8b90ab'}, ticks:{display:false} } },
+    plugins:{legend:{display:false}}
+  }
+});
+
+new Chart(employeeChart,{
+  type:'line',
+  data:{
+    labels:['2022','2023','2024','2025','2026'],
+    datasets:[{
+      label:'Employees',
+      data:[18,42,73,118,154],
+      borderColor:'#10b981',
+      backgroundColor:'rgba(16,185,129,.2)',
+      fill:true,
+      tension:.35,
+      pointBackgroundColor:'#10b981'
+    }]
+  },
+  options:{ plugins:{legend:{display:false}} }
+});
+
+new Chart(apiChart,{
+  type:'bar',
+  data:{
+    labels:['Authentication','Vision','LLM','Forecasting','Search','Voice'],
+    datasets:[{
+      label:'Millions of API Calls',
+      data:[280,640,920,480,350,510],
+      backgroundColor:['#7c5cff','#5b3df0','#22d3ee','#10b981','#f59e0b','#ef4444'],
+      borderRadius:6
+    }]
+  },
+  options:{ plugins:{legend:{display:false}} }
+});
+
+/* ================= 3D HERO — Three.js particle neural network ================= */
+(function(){
+  const canvas = document.getElementById('hero-canvas');
+  const renderer = new THREE.WebGLRenderer({ canvas, alpha:true, antialias:true });
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(55, canvas.clientWidth/canvas.clientHeight, 0.1, 100);
+  camera.position.z = 7;
+
+  function resize(){
+    const w = canvas.clientWidth, h = canvas.clientHeight;
+    renderer.setSize(w, h, false);
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    camera.aspect = w/h;
+    camera.updateProjectionMatrix();
+  }
+
+  const coreGeo = new THREE.IcosahedronGeometry(2.1, 1);
+  const coreMat = new THREE.MeshBasicMaterial({ color: 0x7c5cff, wireframe:true, transparent:true, opacity:0.55 });
+  const core = new THREE.Mesh(coreGeo, coreMat);
+  scene.add(core);
+
+  const innerGeo = new THREE.IcosahedronGeometry(1.5, 0);
+  const innerMat = new THREE.MeshBasicMaterial({ color: 0x22d3ee, wireframe:true, transparent:true, opacity:0.35 });
+  const inner = new THREE.Mesh(innerGeo, innerMat);
+  scene.add(inner);
+
+  const particleCount = 220;
+  const positions = new Float32Array(particleCount * 3);
+  for(let i=0; i<particleCount; i++){
+    const r = 3 + Math.random()*2.6;
+    const theta = Math.random()*Math.PI*2;
+    const phi = Math.acos((Math.random()*2)-1);
+    positions[i*3]   = r * Math.sin(phi) * Math.cos(theta);
+    positions[i*3+1] = r * Math.sin(phi) * Math.sin(theta);
+    positions[i*3+2] = r * Math.cos(phi);
+  }
+  const particleGeo = new THREE.BufferGeometry();
+  particleGeo.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+  const particleMat = new THREE.PointsMaterial({ color: 0xeceefb, size:0.045, transparent:true, opacity:0.75 });
+  const particles = new THREE.Points(particleGeo, particleMat);
+  scene.add(particles);
+
+  let mouseX = 0, mouseY = 0;
+  window.addEventListener('mousemove', (e)=>{
+    mouseX = (e.clientX / window.innerWidth - 0.5);
+    mouseY = (e.clientY / window.innerHeight - 0.5);
+  });
+
+  window.addEventListener('resize', resize);
+  resize();
+
+  function animate(){
+    requestAnimationFrame(animate);
+    core.rotation.y += 0.0028;
+    core.rotation.x += 0.0011;
+    inner.rotation.y -= 0.002;
+    inner.rotation.x += 0.0016;
+    particles.rotation.y += 0.0009;
+
+    camera.position.x += (mouseX*1.4 - camera.position.x) * 0.03;
+    camera.position.y += (-mouseY*1.4 - camera.position.y) * 0.03;
+    camera.lookAt(0,0,0);
+
+    renderer.render(scene, camera);
+  }
+  animate();
+})();
+
+/* ================= PRODUCT DATA ================= */
+const PRODUCTS = [
+  {
+    id: "gpt",
+    icon: "🧠",
+    title: "SHEN GPT Enterprise",
+    description: "Private large language model platform for secure enterprise knowledge management, document analysis, and AI copilots.",
+    features: ["Secure Enterprise Chat", "Knowledge Base Search", "API Integration", "RAG Architecture"],
+    shape: "knot",
+    color: 0x7c5cff,
+    accent: 0x22d3ee
+  },
+  {
+    id: "predictsphere",
+    icon: "📊",
+    title: "PredictSphere",
+    description: "Advanced predictive analytics platform capable of forecasting sales, customer behavior, demand, and financial trends using machine learning.",
+    features: ["Forecasting", "Time Series Models", "AI Reports", "Business Intelligence"],
+    shape: "sphereGrid",
+    color: 0x22d3ee,
+    accent: 0x7c5cff
+  },
+  {
+    id: "visionai",
+    icon: "👁️",
+    title: "VisionAI",
+    description: "Computer vision platform for manufacturing, healthcare, retail analytics and quality inspection.",
+    features: ["Image Recognition", "Object Detection", "OCR", "Video Analytics"],
+    shape: "torus",
+    color: 0xf59e0b,
+    accent: 0x7c5cff
+  },
+  {
+    id: "automind",
+    icon: "🤖",
+    title: "AutoMind",
+    description: "Enterprise workflow automation platform powered by intelligent AI agents.",
+    features: ["AI Agents", "Workflow Builder", "Automation", "API Connectors"],
+    shape: "octahedronCluster",
+    color: 0x10b981,
+    accent: 0x22d3ee
+  },
+  {
+    id: "linguaflow",
+    icon: "💬",
+    title: "LinguaFlow",
+    description: "Real-time multilingual language model supporting over 120 languages.",
+    features: ["Translation", "Summarization", "Speech Recognition", "Voice AI"],
+    shape: "dodecahedron",
+    color: 0x7c5cff,
+    accent: 0xf59e0b
+  },
+  {
+    id: "medicalscan",
+    icon: "🏥",
+    title: "MedicalScan AI",
+    description: "AI-powered healthcare platform assisting clinicians with medical imaging, risk prediction and patient analytics.",
+    features: ["Medical Imaging", "Risk Prediction", "Clinical AI", "Decision Support"],
+    shape: "layeredSphere",
+    color: 0xef4444,
+    accent: 0x22d3ee
+  },
+  {
+    id: "financeiq",
+    icon: "💰",
+    title: "FinanceIQ",
+    description: "Fraud detection and intelligent financial forecasting powered by deep learning.",
+    features: ["Fraud Detection", "Credit Risk", "Compliance", "Forecasting"],
+    shape: "icosahedron",
+    color: 0x10b981,
+    accent: 0x7c5cff
+  },
+  {
+    id: "cybershield",
+    icon: "🔒",
+    title: "CyberShield AI",
+    description: "AI cybersecurity platform providing anomaly detection, network monitoring and automated threat response.",
+    features: ["Threat Detection", "SIEM", "Zero Trust", "AI Monitoring"],
+    shape: "shieldTorusKnot",
+    color: 0x22d3ee,
+    accent: 0xef4444
+  },
+  {
+    id: "codepilot",
+    icon: "👨‍💻",
+    title: "CodePilot",
+    description: "AI software engineering assistant helping developers write, review and optimize production-quality code.",
+    features: ["Code Generation", "Debugging", "Documentation", "Code Review"],
+    shape: "cubeGrid",
+    color: 0x7c5cff,
+    accent: 0x22d3ee
+  }
+];
+
+/* ================= RENDER PRODUCT CARDS ================= */
+const grid = document.getElementById('productsGrid');
+PRODUCTS.forEach(p => {
+  const card = document.createElement('div');
+  card.className = 'product-card';
+  card.innerHTML = `
+    <div class="product-icon">${p.icon}</div>
+    <h3>${p.title}</h3>
+    <p>${p.description}</p>
+    <ul>${p.features.map(f => `<li>${f}</li>`).join('')}</ul>
+    <button class="learn-more-btn" onclick="openProductModal('${p.id}')">Learn More →</button>
+  `;
+  grid.appendChild(card);
+});
+
+/* ================= 3D TILT ON PRODUCT CARDS ================= */
+document.querySelectorAll('.product-card').forEach(card=>{
+  card.addEventListener('mousemove', (e)=>{
+    const rect = card.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    const cx = rect.width/2, cy = rect.height/2;
+    const rotateX = ((y - cy) / cy) * -6;
+    const rotateY = ((x - cx) / cx) * 6;
+    card.style.transform = `perspective(800px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-4px)`;
+    card.style.setProperty('--mx', x+'px');
+    card.style.setProperty('--my', y+'px');
+  });
+  card.addEventListener('mouseleave', ()=>{
+    card.style.transform = 'perspective(800px) rotateX(0) rotateY(0) translateY(0)';
+  });
+});
+
+/* ================= PRODUCT 3D MODAL RENDERER ================= */
+(function(){
+  const canvas = document.getElementById('productModalCanvas');
+  const renderer = new THREE.WebGLRenderer({ canvas, alpha:true, antialias:true });
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(50, 1, 0.1, 100);
+  camera.position.set(0, 0, 6.5);
+
+  const keyLight = new THREE.PointLight(0xffffff, 1.2);
+  keyLight.position.set(4, 4, 6);
+  scene.add(keyLight);
+  scene.add(new THREE.AmbientLight(0xffffff, 0.35));
+
+  let currentGroup = null;
+  let rafId = null;
+  let mx = 0, my = 0;
+
+  function buildShape(config){
+    const group = new THREE.Group();
+    const { shape, color, accent } = config;
+
+    const wireMat = (c, op=0.85) => new THREE.MeshBasicMaterial({ color:c, wireframe:true, transparent:true, opacity:op });
+    const solidMat = (c, op=0.16) => new THREE.MeshStandardMaterial({ color:c, transparent:true, opacity:op, roughness:0.3, metalness:0.4 });
+
+    if(shape === "knot"){
+      const g = new THREE.TorusKnotGeometry(1.5, 0.42, 140, 16);
+      group.add(new THREE.Mesh(g, solidMat(color)));
+      group.add(new THREE.Mesh(g, wireMat(color)));
+    }
+    else if(shape === "sphereGrid"){
+      const g = new THREE.SphereGeometry(1.8, 20, 14);
+      group.add(new THREE.Mesh(g, wireMat(color, 0.9)));
+      group.add(new THREE.Mesh(g, solidMat(color, 0.08)));
+      const ring = new THREE.Mesh(new THREE.TorusGeometry(2.3, 0.02, 8, 60), new THREE.MeshBasicMaterial({color:accent}));
+      ring.rotation.x = Math.PI/2.4;
+      group.add(ring);
+    }
+    else if(shape === "torus"){
+      const g = new THREE.TorusGeometry(1.6, 0.55, 20, 60);
+      group.add(new THREE.Mesh(g, solidMat(color, 0.22)));
+      group.add(new THREE.Mesh(g, wireMat(color)));
+      const eye = new THREE.Mesh(new THREE.SphereGeometry(0.55,16,16), new THREE.MeshStandardMaterial({color:accent, emissive:accent, emissiveIntensity:0.4}));
+      group.add(eye);
+    }
+    else if(shape === "octahedronCluster"){
+      for(let i=0;i<5;i++){
+        const s = 0.5 + Math.random()*0.7;
+        const g = new THREE.OctahedronGeometry(s, 0);
+        const m = new THREE.Mesh(g, wireMat(i % 2 === 0 ? color : accent));
+        m.position.set((Math.random()-0.5)*3, (Math.random()-0.5)*3, (Math.random()-0.5)*2);
+        group.add(m);
+      }
+    }
+    else if(shape === "dodecahedron"){
+      const g = new THREE.DodecahedronGeometry(1.7, 0);
+      group.add(new THREE.Mesh(g, solidMat(color, 0.18)));
+      group.add(new THREE.Mesh(g, wireMat(color)));
+    }
+    else if(shape === "layeredSphere"){
+      for(let i=0;i<3;i++){
+        const g = new THREE.SphereGeometry(1.1 + i*0.4, 16, 12);
+        group.add(new THREE.Mesh(g, wireMat(i===1 ? accent : color, 0.55 - i*0.12)));
+      }
+      const cross = new THREE.Group();
+      const bar1 = new THREE.Mesh(new THREE.BoxGeometry(1.4,0.15,0.15), new THREE.MeshBasicMaterial({color:accent}));
+      const bar2 = new THREE.Mesh(new THREE.BoxGeometry(0.15,1.4,0.15), new THREE.MeshBasicMaterial({color:accent}));
+      cross.add(bar1, bar2);
+      group.add(cross);
+    }
+    else if(shape === "icosahedron"){
+      const g = new THREE.IcosahedronGeometry(1.8, 0);
+      group.add(new THREE.Mesh(g, solidMat(color, 0.16)));
+      group.add(new THREE.Mesh(g, wireMat(color)));
+      const g2 = new THREE.IcosahedronGeometry(1.1, 0);
+      group.add(new THREE.Mesh(g2, wireMat(accent, 0.6)));
+    }
+    else if(shape === "shieldTorusKnot"){
+      const shieldShape = new THREE.Shape();
+      shieldShape.moveTo(0, 1.6);
+      shieldShape.quadraticCurveTo(1.5, 1.1, 1.3, -0.3);
+      shieldShape.quadraticCurveTo(1.0, -1.3, 0, -1.8);
+      shieldShape.quadraticCurveTo(-1.0, -1.3, -1.3, -0.3);
+      shieldShape.quadraticCurveTo(-1.5, 1.1, 0, 1.6);
+      const g = new THREE.ExtrudeGeometry(shieldShape, { depth:0.25, bevelEnabled:true, bevelThickness:0.05, bevelSize:0.05, bevelSegments:2 });
+      g.center();
+      group.add(new THREE.Mesh(g, solidMat(color, 0.3)));
+      const edges = new THREE.EdgesGeometry(g);
+      group.add(new THREE.LineSegments(edges, new THREE.LineBasicMaterial({color:accent})));
+    }
+    else if(shape === "cubeGrid"){
+      for(let x=-1;x<=1;x++){
+        for(let y=-1;y<=1;y++){
+          if(Math.random() > 0.7) continue;
+          const g = new THREE.BoxGeometry(0.6,0.6,0.6);
+          const m = new THREE.Mesh(g, wireMat(Math.random()>0.5?color:accent));
+          m.position.set(x*0.9, y*0.9, (Math.random()-0.5)*0.6);
+          group.add(m);
+        }
+      }
+    }
+
+    return group;
+  }
+
+  function resize(){
+    const w = canvas.clientWidth, h = canvas.clientHeight;
+    if(w === 0 || h === 0) return;
+    renderer.setSize(w, h, false);
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    camera.aspect = w/h;
+    camera.updateProjectionMatrix();
+  }
+
+  canvas.parentElement.addEventListener('mousemove', (e)=>{
+    const rect = canvas.getBoundingClientRect();
+    mx = ((e.clientX - rect.left) / rect.width - 0.5);
+    my = ((e.clientY - rect.top) / rect.height - 0.5);
+  });
+
+  function animate(){
+    rafId = requestAnimationFrame(animate);
+    if(currentGroup){
+      currentGroup.rotation.y += 0.006;
+      currentGroup.rotation.x += 0.0016;
+    }
+    camera.position.x += (mx*1.6 - camera.position.x) * 0.04;
+    camera.position.y += (-my*1.6 - camera.position.y) * 0.04;
+    camera.lookAt(0,0,0);
+    resize();
+    renderer.render(scene, camera);
+  }
+
+  window.openProductModal = function(id){
+    const p = PRODUCTS.find(x => x.id === id);
+    if(!p) return;
+
+    if(currentGroup){ scene.remove(currentGroup); }
+    currentGroup = buildShape(p);
+    scene.add(currentGroup);
+
+    document.getElementById('modalIcon').textContent = p.icon;
+    document.getElementById('modalTitle').textContent = p.title;
+    document.getElementById('modalDescription').textContent = p.description;
+    document.getElementById('modalTag').textContent = p.title + ' — 3D Preview';
+    document.getElementById('modalFeatures').innerHTML = p.features.map(f => `<li>${f}</li>`).join('');
+
+    document.getElementById('productModal').style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+
+    requestAnimationFrame(resize);
+    if(!rafId) animate();
+  };
+
+  window.closeProductModal = function(){
+    document.getElementById('productModal').style.display = 'none';
+    document.body.style.overflow = '';
+  };
+
+  document.getElementById('productModal').addEventListener('click', (e)=>{
+    if(e.target.id === 'productModal') closeProductModal();
+  });
+
+  document.addEventListener('keydown', (e)=>{
+    if(e.key === 'Escape') closeProductModal();
+  });
+})();
 </script>
 
 </body>
