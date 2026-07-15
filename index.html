@@ -419,11 +419,53 @@
   .article-card{
     background:var(--surface);
     border:1px solid var(--border);
-    padding:34px;
     border-radius:16px;
+    overflow:hidden;
     transition:.3s;
   }
   .article-card:hover{ border-color:rgba(124,92,255,0.4); transform:translateY(-4px); }
+
+  .article-card .article-media{
+    position:relative;
+    height:200px;
+    overflow:hidden;
+  }
+
+  .article-card .article-media img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+    transition:transform .5s ease;
+    filter:saturate(0.9) brightness(0.85);
+  }
+
+  .article-card:hover .article-media img{ transform:scale(1.06); }
+
+  .article-card .article-media::after{
+    content:'';
+    position:absolute;
+    inset:0;
+    background:linear-gradient(180deg, rgba(13,16,32,0) 40%, var(--surface) 100%);
+  }
+
+  .article-card .article-tag{
+    position:absolute;
+    top:16px; left:16px;
+    z-index:2;
+    font-family:var(--mono);
+    font-size:11px;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    color:var(--cyan);
+    background:rgba(5,6,12,0.65);
+    border:1px solid rgba(34,211,238,0.3);
+    padding:5px 12px;
+    border-radius:999px;
+    backdrop-filter:blur(6px);
+  }
+
+  .article-card .article-body{ padding:30px 34px 34px; }
 
   .article-card h2{
     color:var(--text);
@@ -700,31 +742,55 @@
   <div class="article-grid">
 
     <div class="article-card">
-      <h2>The Future of Enterprise Artificial Intelligence</h2>
-      <p>Artificial intelligence is rapidly becoming one of the most transformative technologies in modern business. Organizations across healthcare, finance, manufacturing, logistics, education, and retail are adopting AI to improve decision making, automate repetitive work, reduce costs, and uncover insights hidden within massive datasets.</p>
-      <p>Modern AI systems are no longer limited to prediction alone. Large language models, autonomous AI agents, computer vision, and multimodal intelligence are reshaping how employees interact with software. Rather than replacing human workers, AI increasingly serves as an intelligent copilot capable of summarizing reports, generating code, answering complex questions, and automating workflows that previously required hours of manual effort.</p>
-      <p>As enterprise adoption accelerates, organizations must balance innovation with responsible AI governance, transparency, cybersecurity, and privacy. Responsible deployment will determine which companies become industry leaders during the next decade of digital transformation.</p>
+      <div class="article-media">
+        <span class="article-tag">Strategy</span>
+        <img src="https://images.unsplash.com/photo-1750365919971-7dd273e7b317?auto=format&fit=crop&w=1200&q=80" alt="Conceptual render of an AI processor embedded in a glowing lightbulb" loading="lazy">
+      </div>
+      <div class="article-body">
+        <h2>The Future of Enterprise Artificial Intelligence</h2>
+        <p>Artificial intelligence is rapidly becoming one of the most transformative technologies in modern business. Organizations across healthcare, finance, manufacturing, logistics, education, and retail are adopting AI to improve decision making, automate repetitive work, reduce costs, and uncover insights hidden within massive datasets.</p>
+        <p>Modern AI systems are no longer limited to prediction alone. Large language models, autonomous AI agents, computer vision, and multimodal intelligence are reshaping how employees interact with software. Rather than replacing human workers, AI increasingly serves as an intelligent copilot capable of summarizing reports, generating code, answering complex questions, and automating workflows that previously required hours of manual effort.</p>
+        <p>As enterprise adoption accelerates, organizations must balance innovation with responsible AI governance, transparency, cybersecurity, and privacy. Responsible deployment will determine which companies become industry leaders during the next decade of digital transformation.</p>
+      </div>
     </div>
 
     <div class="article-card">
-      <h2>Machine Learning in Healthcare</h2>
-      <p>Healthcare continues to generate enormous volumes of structured and unstructured data through electronic medical records, medical imaging, laboratory systems, wearable devices, insurance claims, and patient engagement platforms.</p>
-      <p>Machine learning models can analyze this information to identify patients who are at greater risk of hospitalization, predict disease progression, optimize staffing, improve care coordination, detect fraud, and support physicians with clinical decision making.</p>
-      <p>Computer vision algorithms are increasingly capable of detecting abnormalities within X-rays, CT scans, MRI images, and pathology slides. While these systems are designed to assist clinicians rather than replace them, they provide valuable decision support that improves consistency and operational efficiency.</p>
+      <div class="article-media">
+        <span class="article-tag">Healthcare</span>
+        <img src="https://images.unsplash.com/photo-1530497610245-94d3c16cda28?auto=format&fit=crop&w=1200&q=80" alt="CT scan result being reviewed by a clinician" loading="lazy">
+      </div>
+      <div class="article-body">
+        <h2>Machine Learning in Healthcare</h2>
+        <p>Healthcare continues to generate enormous volumes of structured and unstructured data through electronic medical records, medical imaging, laboratory systems, wearable devices, insurance claims, and patient engagement platforms.</p>
+        <p>Machine learning models can analyze this information to identify patients who are at greater risk of hospitalization, predict disease progression, optimize staffing, improve care coordination, detect fraud, and support physicians with clinical decision making.</p>
+        <p>Computer vision algorithms are increasingly capable of detecting abnormalities within X-rays, CT scans, MRI images, and pathology slides. While these systems are designed to assist clinicians rather than replace them, they provide valuable decision support that improves consistency and operational efficiency.</p>
+      </div>
     </div>
 
     <div class="article-card">
-      <h2>Generative AI & Intelligent Automation</h2>
-      <p>Generative AI has expanded beyond chatbots into a broad ecosystem of tools capable of writing software, generating reports, summarizing meetings, translating documents, producing marketing content, and assisting customer support teams.</p>
-      <p>Combined with workflow automation, organizations can automate repetitive business processes while allowing employees to focus on higher-value strategic activities.</p>
-      <p>Future enterprise platforms will increasingly combine language models, computer vision, predictive analytics, and autonomous AI agents into unified intelligent operating systems.</p>
+      <div class="article-media">
+        <span class="article-tag">Automation</span>
+        <img src="https://images.unsplash.com/photo-1531746790731-6c087fecd65a?auto=format&fit=crop&w=1200&q=80" alt="Closeup of a white robotic arm used for automation" loading="lazy">
+      </div>
+      <div class="article-body">
+        <h2>Generative AI & Intelligent Automation</h2>
+        <p>Generative AI has expanded beyond chatbots into a broad ecosystem of tools capable of writing software, generating reports, summarizing meetings, translating documents, producing marketing content, and assisting customer support teams.</p>
+        <p>Combined with workflow automation, organizations can automate repetitive business processes while allowing employees to focus on higher-value strategic activities.</p>
+        <p>Future enterprise platforms will increasingly combine language models, computer vision, predictive analytics, and autonomous AI agents into unified intelligent operating systems.</p>
+      </div>
     </div>
 
     <div class="article-card">
-      <h2>Computer Vision at Scale</h2>
-      <p>Computer vision enables organizations to interpret images and video in real time. Manufacturing companies use visual inspection systems to detect product defects while retailers analyze customer traffic patterns to optimize store layouts.</p>
-      <p>Healthcare organizations leverage image recognition for diagnostic support, while logistics providers monitor warehouse operations through intelligent camera systems capable of recognizing inventory movement and safety hazards.</p>
-      <p>As GPU performance continues to improve, real-time vision systems will become more accurate, affordable, and scalable across nearly every industry.</p>
+      <div class="article-media">
+        <span class="article-tag">Vision</span>
+        <img src="https://images.unsplash.com/photo-1501621667575-af81f1f0bacc?auto=format&fit=crop&w=1200&q=80" alt="Close-up of a blue eye representing computer vision" loading="lazy">
+      </div>
+      <div class="article-body">
+        <h2>Computer Vision at Scale</h2>
+        <p>Computer vision enables organizations to interpret images and video in real time. Manufacturing companies use visual inspection systems to detect product defects while retailers analyze customer traffic patterns to optimize store layouts.</p>
+        <p>Healthcare organizations leverage image recognition for diagnostic support, while logistics providers monitor warehouse operations through intelligent camera systems capable of recognizing inventory movement and safety hazards.</p>
+        <p>As GPU performance continues to improve, real-time vision systems will become more accurate, affordable, and scalable across nearly every industry.</p>
+      </div>
     </div>
 
   </div>
